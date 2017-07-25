@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+        <title>CEMA</title>
+
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="../js/moment-with-locales.js"></script>
+		<script type="text/javascript" src="../js/clndr.min.js"></script>
+		<script type="text/javascript" src="../js/underscore.js"></script>
+		<script type="text/javascript" src="../js/rating.min.js"></script>
+
+	</head>
+    <body>
+	    <div data-role="page" style="background:#FFF;">
+		    <div class="topo">
+			    <div class="logotipo">
+				    <div style="min-width:10px; float:left; color:#214629; margin-left:5px;" id="bt_medicos_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#214629;" id="medicos-titulo"><b>MÉDICOS<b></div>
+				</div>
+		    </div>
+
+			<div role="main" class="ui-content">
+				<div class="medico-calendaio">
+					<div class="medico-calendaio-botao">
+						<div class="medico-calendaio-botao-icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+						<div class="medico-calendaio-botao-texto">Data<b id='data-titulo-exibicao'>Próximos 7 dias</b></div>
+					</div>
+					<div class="cal1" style="display:none"></div>
+				</div>
+				<div id="id_conteudo_medicos" style="text-align:center; padding:20px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
+				</div>
+			</div>
+		
+			<br><br><br><br>
+		
+			<div class="botoes-rodape">
+				<div class="botoes-rodape-bloco1" id="medicos-rodape01" style="background-image:url(../img/icon_01.png);">Nova</div>
+				<div class="botoes-rodape-bloco1" id="medicos-rodape02" style="background-image:url(../img/icon_02.png);">Agendado</div>
+				<div class="botoes-rodape-bloco1" id="medicos-rodape03" style="background-image:url(../img/icon_03.png);">Cancelar</div>
+				<div class="botoes-rodape-bloco1" id="medicos-rodape04" style="background-image:url(../img/icon_04.png);">Cadastro</div>
+			</div>
+			
+			<script>
+				
+				var unidade = window.localStorage.getItem('unidade');
+				var especialidade = window.localStorage.getItem('especialidade');
+				var subespecialidade = window.localStorage.getItem('subespecialidade');
+				var data_calendario = window.localStorage.getItem('data_calendario');
+				
+				if(data_calendario!="" && data_calendario!=null){
+					var data_split = data_calendario.split("-");
+					$('#data-titulo-exibicao').html(data_split[2]+"/"+data_split[1]+"/"+data_split[0]);
+					$.get("http://cema.projetotemporario.com.br/app_api/medicos.php", { unidade:unidade, especialidade:especialidade, subespecialidade:subespecialidade, data:data_calendario }, function(data){
+						$('#id_conteudo_medicos').html(data);
+					});
+				}else{
+					$.get("http://cema.projetotemporario.com.br/app_api/medicos.php", { unidade:unidade, especialidade:especialidade, subespecialidade:subespecialidade }, function(data){
+						$('#id_conteudo_medicos').html(data);
+					});
+				}
+				
+				$('#bt_medicos_voltar').click(function(){ $.mobile.changePage("especialidades.html", { transition: "fade", changeHash: false }); });
+								
+				$('#medicos-rodape01').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
+				$('#medicos-rodape02').click(function(){ $.mobile.changePage("agendado.html", { transition: "fade", changeHash: false }); });
+				$('#medicos-rodape03').click(function(){ $.mobile.changePage("cancelar.html", { transition: "fade", changeHash: false }); });
+				$('#medicos-rodape04').click(function(){ $.mobile.changePage("meu-cadastro.html", { transition: "fade", changeHash: false }); });
+				
+				$('.medico-calendaio-botao').click(function(){
+					$('.cal1').slideToggle();
+				});
+				
+				// Call this from the developer console and you can control both instances
+				var calendars = {};
+				
+				(function (factory) {
+				    if (typeof define === 'function' && define.amd) {
+				        define(['moment'], factory); // AMD
+				    } else if (typeof exports === 'object') {
+				        module.exports = factory(require('../moment')); // Node
+				    } else {
+				        factory(window.moment); // Browser global
+				    }
+				}(function (moment) {
+				    return moment.defineLocale('pt-br', {
+				        months : 'Janeiro_Fevereiro_Março_Abril_Maio_Junho_Julho_Agosto_Setembro_Outubro_Novembro_Dezembro'.split('_'),
+				        monthsShort : 'Jan_Fev_Mar_Abr_Mai_Jun_Jul_Ago_Set_Out_Nov_Dez'.split('_'),
+				        weekdays : 'Domingo_Segunda-Feira_Terça-Feira_Quarta-Feira_Quinta-Feira_Sexta-Feira_Sábado'.split('_'),
+				        weekdaysShort : 'Dom_Seg_Ter_Qua_Qui_Sex_Sáb'.split('_'),
+				        weekdaysMin : 'D_S_T_Q_Q_S_S'.split('_'),
+				        longDateFormat : {
+				            LT : 'HH:mm',
+				            L : 'DD/MM/YYYY',
+				            LL : 'D [de] MMMM [de] YYYY',
+				            LLL : 'D [de] MMMM [de] YYYY [às] LT',
+				            LLLL : 'dddd, D [de] MMMM [de] YYYY [às] LT'
+				        },
+				        calendar : {
+				            sameDay: '[Hoje às] LT',
+				            nextDay: '[Amanhã às] LT',
+				            nextWeek: 'dddd [às] LT',
+				            lastDay: '[Ontem às] LT',
+				            lastWeek: function () {
+				                return (this.day() === 0 || this.day() === 6) ?
+				                    '[Último] dddd [às] LT' : // Saturday + Sunday
+				                    '[Última] dddd [às] LT'; // Monday - Friday
+				            },
+				            sameElse: 'L'
+				        },
+				        relativeTime : {
+				            future : 'em %s',
+				            past : '%s atrás',
+				            s : 'segundos',
+				            m : 'um minuto',
+				            mm : '%d minutos',
+				            h : 'uma hora',
+				            hh : '%d horas',
+				            d : 'um dia',
+				            dd : '%d dias',
+				            M : 'um mês',
+				            MM : '%d meses',
+				            y : 'um ano',
+				            yy : '%d anos'
+				        },
+				        ordinal : '%dº'
+				    });
+				}));
+				
+				$(document).ready( function() {
+				    var thisMonth = moment().format('YYYY-MM');
+				    var eventArray = [
+				        {
+				            date: thisMonth + '-27',
+				            title: 'Single Day Event'
+				        }
+				    ];
+				    
+				    calendars.clndr1 = $('.cal1').clndr({
+				        //events: eventArray,
+				        clickEvents: {
+				            click: function (target) {
+								window.localStorage.setItem('data_calendario',target.date._i);
+								$('.cal1').hide();
+								var data_split = target.date._i.split("-");
+								
+								var subespecialidade = window.localStorage.getItem('subespecialidade');
+								
+								$('#data-titulo-exibicao').html(data_split[2]+"/"+data_split[1]+"/"+data_split[0]);
+								$('#id_conteudo_medicos').html('<div style="padding-top:120px; text-align:center; font-size:13px;"><img src="../img/loading.gif" width="110" height="10" /><br><br>Aguarde carregando...</div>');
+								$.get("http://cema.projetotemporario.com.br/app_api/medicos.php", { unidade:unidade, especialidade:especialidade, subespecialidade:subespecialidade, data:target.date._i }, function(data){
+									$('#id_conteudo_medicos').html(data);
+								});
+				            }
+				        },
+				        multiDayEvents: {
+				            singleDay: 'date',
+				            endDate: 'endDate',
+				            startDate: 'startDate'
+				        },
+				        showAdjacentMonths: true,
+				        adjacentDaysChangeMonth: false
+				    });
+				
+				    // Bind all clndrs to the left and right arrow keys
+				    $(document).keydown( function(e) {
+				        // Left arrow
+				        if (e.keyCode == 37) {
+				            calendars.clndr1.back();
+				            calendars.clndr2.back();
+				            calendars.clndr3.back();
+				        }
+				
+				        // Right arrow
+				        if (e.keyCode == 39) {
+				            calendars.clndr1.forward();
+				            calendars.clndr2.forward();
+				            calendars.clndr3.forward();
+				        }
+				    });
+				});
+				
+			</script>
+		
+		</div>
+    </body>
+</html>
