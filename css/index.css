@@ -138,12 +138,11 @@ h1 {
 }
 
 .topo .logotipo {
-	background:#ecfded;
+	background:#FFF;
 	text-align:center;
 	padding:15px 10px 10px 10px;
 	text-shadow: none;
 	text-transform: uppercase;
-	border-bottom:1px solid #214629;
 }
 
 .topo .titulo_tela {
