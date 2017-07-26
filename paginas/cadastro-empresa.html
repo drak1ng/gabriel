@@ -37,7 +37,7 @@
 	    <div data-role="page" style="background:#FFF;">
 		    <div class="topo">
 			    <div class="logotipo">
-				    <div style="min-width:10px; float:left; color:#214629; margin-left:5px;" id="bt_cadastro_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:left; color:#214629; margin-left:5px;" id="bt_cadastro_empresa_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
 				    <div style="margin:0px 80px; text-align:center; color:#214629;"><b>CADASTRE-SE<b></div>
 				</div>
 		    </div>
@@ -45,81 +45,75 @@
 			<div role="main" class="ui-content">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
-					<input type="text" id="cadastro_nome" placeholder="Nome" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_sobrenome" placeholder="Sobrenome" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_nascimento" placeholder="Nascimento" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<select id="cadastro_sexo" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_empresa_nome" placeholder="Nome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Sobrenome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_nascimento" placeholder="Nascimento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<select id="cadastro_empresa_sexo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 						<option value="">Sexo</option>
 						<option value=""></option>
 						<option value="Masculino">Masculino</option>
 						<option value="Feminino">Feminino</option>
 					</select>
-					<input type="text" id="cadastro_telefone" placeholder="Telefone" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_celular" placeholder="Celular" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<br>
-					<h3>Documentos</h3>
-					<input type="text" id="cadastro_responsavel_legal" placeholder="Responsável legal (no caso de menor)" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_documento" placeholder="(CPF / RG / Certidão de Nascimento)" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_empresa_telefone" placeholder="Telefone" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_celular" placeholder="Celular" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Dados de Login</h3>
-					<input type="email" id="cadastro_email" placeholder="E-mail" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="password" id="cadastro_senha" placeholder="Senha" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="password" id="cadastro_confirme_senha" placeholder="Confirme a Senha" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="email" id="cadastro_empresa_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="password" id="cadastro_empresa_senha" placeholder="Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="password" id="cadastro_empresa_confirme_senha" placeholder="Confirme a Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Endereço</h3>					
-					<input type="tel" id="cadastro_cep" placeholder="Cep" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<div style="border:1px solid #214629; border-radius:6px; background:#FFF; color:#214629; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;">Consultar CEP</div>
+					<input type="tel" id="cadastro_empresa_cep" placeholder="Cep" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<div style="border:1px solid #ccc; border-radius:6px; background:#FFF; color:#999; padding:10px; margin-top:5px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;">Consultar CEP</div>
 					<div style='clear:both;'></div>
 					<br>
-					<input type="text" id="cadastro_endereco" placeholder="Endereço" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_numero" placeholder="Número" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_complemento" placeholder="Complemento" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_estado" placeholder="Estado" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_cidade" placeholder="Cidade" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
-					<input type="text" id="cadastro_bairro" placeholder="Bairro" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_empresa_endereco" placeholder="Endereço" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_numero" placeholder="Número" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_complemento" placeholder="Complemento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_estado" placeholder="Estado" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_cidade" placeholder="Cidade" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_bairro" placeholder="Bairro" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					
-					<div style="border:1px solid #214629; border-radius:6px; background:#FFF; color:#214629; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_cadastro_salvar">Quero me Cadastrar</div>
+					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_empresa_cadastro_salvar">Quero me Cadastrar</div>
 				</div>
 			</div>
 		
 			<style>
-				.ui-select .ui-btn { border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; text-align:left; font-size:14px; color:#666; padding-left:5px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
+				.ui-select .ui-btn { font-family:'roboto'; border:1px solid #CCC; border-radius:6px; background:#FFF; text-align:left; font-size:14px; color:#999; padding-left:10px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
 			</style>
 			
 			<script>
 				
-				$('#cadastro_nascimento').mask('99/99/9999');
-				$('#cadastro_telefone').mask('(99) 9999-9999');
-				$('#cadastro_celular').mask('(99) 99999-9999');
-				$('#cadastro_cep').mask('99999-999');
+				$('#cadastro_empresa_nascimento').mask('99/99/9999');
+				$('#cadastro_empresa_telefone').mask('(99) 9999-9999');
+				$('#cadastro_empresa_celular').mask('(99) 99999-9999');
+				$('#cadastro_empresa_cep').mask('99999-999');
 				
-				$('#cadastro_cep').blur(function(){
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'endereco', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_endereco').val(data); });
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'bairro', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_bairro').val(data); });
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'cidade', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_cidade').val(data); });
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_estado').val(data); });
+				$('#cadastro_empresa_cep').blur(function(){
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'endereco', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_endereco').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'bairro', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_bairro').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'cidade', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_cidade').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_estado').val(data); });
 				});
 				
 				$("#bt_cadastro_salvar").click(function(){
-					var nome = $('#cadastro_nome').val();
-					var sobrenome = $('#cadastro_sobrenome').val();
-					var nascimento = $('#cadastro_nascimento').val();
-					var sexo = $('#cadastro_sexo').val();
-					var email = $('#cadastro_email').val();
-					var telefone = $('#cadastro_telefone').val();
-					var celular = $('#cadastro_celular').val();
-					var responsavel_legal = $('#cadastro_responsavel_legal').val();
-					var documento = $('#cadastro_documento').val();
-					var senha = $('#cadastro_senha').val();
-					var confirme_senha = $('#cadastro_confirme_senha').val();
+					var nome = $('#cadastro_empresa_nome').val();
+					var sobrenome = $('#cadastro_empresa_sobrenome').val();
+					var nascimento = $('#cadastro_empresa_nascimento').val();
+					var sexo = $('#cadastro_empresa_sexo').val();
+					var email = $('#cadastro_empresa_email').val();
+					var telefone = $('#cadastro_empresa_telefone').val();
+					var celular = $('#cadastro_empresa_celular').val();
+					var senha = $('#cadastro_empresa_senha').val();
+					var confirme_senha = $('#cadastro_empresa_confirme_senha').val();
 					
-					var cep = $('#cadastro_cep').val();
-					var endereco = $('#cadastro_endereco').val();
-					var numero = $('#cadastro_numero').val();
-					var complemento = $('#cadastro_complemento').val();
-					var estado = $('#cadastro_estado').val();
-					var cidade = $('#cadastro_cidade').val();
-					var bairro = $('#cadastro_bairro').val();
+					var cep = $('#cadastro_empresa_cep').val();
+					var endereco = $('#cadastro_empresa_endereco').val();
+					var numero = $('#cadastro_empresa_numero').val();
+					var complemento = $('#cadastro_empresa_complemento').val();
+					var estado = $('#cadastro_empresa_estado').val();
+					var cidade = $('#cadastro_empresa_cidade').val();
+					var bairro = $('#cadastro_empresa_bairro').val();
 					
 					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
 					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
@@ -149,7 +143,7 @@
 					
 				});
 				
-				$("#bt_cadastro_voltar").click(function(){
+				$("#bt_cadastro_empresa_voltar").click(function(){
 					$.mobile.changePage("cadastro_tipo.html", { transition: "fade", changeHash: false });
 				});
 				
