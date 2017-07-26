@@ -45,9 +45,9 @@
 			<div style="width:300px; height:500px; position:fixed; top:50%; left:50%; margin:-260px 0px 0px -150px;">
 		    <img src="../img/logo_gdd.png" alt="Cema" width="160" style="margin:0px 0px 50px 0px;">
 		    <br>
-			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_esqueci_senha">Você</div>
-			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_esqueci_senha">Profissinal</div>
-			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_esqueci_senha">Empresa</div>
+			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_cadastro_tipo_voce">Você</div>
+			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_cadastro_tipo_profissional">Profissinal</div>
+			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_cadastro_tipo_empresa">Empresa</div>
 			</div>
 			
 			<script>
@@ -59,10 +59,20 @@
 					}
 				});
 				
-				
-				
 				$("#bt_cadastro_tipo_voltar").click(function(){
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
+				});
+				
+				$("#bt_cadastro_tipo_voce").click(function(){
+					$.mobile.changePage("cadastro.html", { transition: "fade", changeHash: false });
+				});
+				
+				$("#bt_cadastro_tipo_profissional").click(function(){
+					$.mobile.changePage("cadastro.html", { transition: "fade", changeHash: false });
+				});
+				
+				$("#bt_cadastro_tipo_empresa").click(function(){
+					$.mobile.changePage("cadastro.html", { transition: "fade", changeHash: false });
 				});
 				
 			</script>
