@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <title>GABRIEL</title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../js/cordova.js"></script>
+	</head>
+    <body>
+	    <div data-role="page" style="background:#FFF;">
+		    <div class="topo">
+			    <div class="logotipo">
+				    <div style="min-width:10px; float:left; color:#214629; margin-left:5px;" id="bt_cadastro_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#214629;"><b>CADASTRE-SE<b></div>
+				</div>
+		    </div>
+
+			<div role="main" class="ui-content">
+				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
+					<input type="text" id="cadastro_nome" placeholder="Nome" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_sobrenome" placeholder="Sobrenome" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_nascimento" placeholder="Nascimento" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<select id="cadastro_sexo" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+						<option value="">Sexo</option>
+						<option value=""></option>
+						<option value="Masculino">Masculino</option>
+						<option value="Feminino">Feminino</option>
+					</select>
+					<input type="text" id="cadastro_telefone" placeholder="Telefone" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_celular" placeholder="Celular" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<br>
+					<h3>Documentos</h3>
+					<input type="text" id="cadastro_responsavel_legal" placeholder="Responsável legal (no caso de menor)" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_documento" placeholder="(CPF / RG / Certidão de Nascimento)" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<br>
+					<h3>Dados de Login</h3>
+					<input type="email" id="cadastro_email" placeholder="E-mail" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="password" id="cadastro_senha" placeholder="Senha" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="password" id="cadastro_confirme_senha" placeholder="Confirme a Senha" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<br>
+					<h3>Endereço</h3>					
+					<input type="tel" id="cadastro_cep" placeholder="Cep" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<div style="border:1px solid #214629; border-radius:6px; background:#FFF; color:#214629; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;">Consultar CEP</div>
+					<div style='clear:both;'></div>
+					<br>
+					<input type="text" id="cadastro_endereco" placeholder="Endereço" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_numero" placeholder="Número" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_complemento" placeholder="Complemento" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_estado" placeholder="Estado" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_cidade" placeholder="Cidade" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					<input type="text" id="cadastro_bairro" placeholder="Bairro" style="border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF;">
+					
+					<div style="border:1px solid #214629; border-radius:6px; background:#FFF; color:#214629; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_cadastro_salvar">Quero me Cadastrar</div>
+				</div>
+			</div>
+		
+			<style>
+				.ui-select .ui-btn { border:0px solid #FFF; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; text-align:left; font-size:14px; color:#666; padding-left:5px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
+			</style>
+			
+			<script>
+				
+				$('#cadastro_nascimento').mask('99/99/9999');
+				$('#cadastro_telefone').mask('(99) 9999-9999');
+				$('#cadastro_celular').mask('(99) 99999-9999');
+				$('#cadastro_cep').mask('99999-999');
+				
+				$('#cadastro_cep').blur(function(){
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'endereco', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_endereco').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'bairro', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_bairro').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'cidade', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_cidade').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_cep').val() }, function(data){ $('#cadastro_estado').val(data); });
+				});
+				
+				$("#bt_cadastro_salvar").click(function(){
+					var nome = $('#cadastro_nome').val();
+					var sobrenome = $('#cadastro_sobrenome').val();
+					var nascimento = $('#cadastro_nascimento').val();
+					var sexo = $('#cadastro_sexo').val();
+					var email = $('#cadastro_email').val();
+					var telefone = $('#cadastro_telefone').val();
+					var celular = $('#cadastro_celular').val();
+					var responsavel_legal = $('#cadastro_responsavel_legal').val();
+					var documento = $('#cadastro_documento').val();
+					var senha = $('#cadastro_senha').val();
+					var confirme_senha = $('#cadastro_confirme_senha').val();
+					
+					var cep = $('#cadastro_cep').val();
+					var endereco = $('#cadastro_endereco').val();
+					var numero = $('#cadastro_numero').val();
+					var complemento = $('#cadastro_complemento').val();
+					var estado = $('#cadastro_estado').val();
+					var cidade = $('#cadastro_cidade').val();
+					var bairro = $('#cadastro_bairro').val();
+					
+					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
+					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
+					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
+					if(senha==""){ alert("O campo Senha deve ser preenchido"); return false; }
+					if(confirme_senha==""){ alert("O campo Confirme a Senha deve ser preenchido"); return false; }
+					if(confirme_senha!=senha){ alert("As senha informadas não são iguais"); return false; }
+					
+					if(cep==""){ alert("O campo CEP deve ser preenchido"); return false; }
+					if(endereco==""){ alert("O campo Endereço deve ser preenchido"); return false; }
+					if(numero==""){ alert("O campo Número deve ser preenchido"); return false; }
+					if(estado==""){ alert("O campo Estado deve ser preenchido"); return false; }
+					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
+					if(bairro==""){ alert("O campo Bairro deve ser preenchido"); return false; }
+					
+
+					
+					$.get("http://cema.projetotemporario.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone:telefone, celular:celular, senha:senha, responsavel_legal:responsavel_legal, documento:documento, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro }, function(data){
+						if(data=="ERRO_EMAIL"){
+							alert("Esse E-mail já foi utilizado em outro Cadastro");
+						}else if(data=="OK"){
+							$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
+						}else{
+							alert("Não foi possuível concluir o seu cadastro, tente novamente mais tarde!");
+						}
+					});
+					
+				});
+				
+				$("#bt_cadastro_voltar").click(function(){
+					$.mobile.changePage("cadastro_tipo.html", { transition: "fade", changeHash: false });
+				});
+				
+			</script>
+		
+		</div>
+    </body>
+</html>

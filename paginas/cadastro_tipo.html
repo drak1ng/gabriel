@@ -38,13 +38,13 @@
 			    <div class="topo">
 			    <div class="logotipo">
 				    <div style="min-width:10px; float:left; color:#000;" id="bt_cadastro_tipo_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Cadastre-se<b></div>
+				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>&nbsp<b></div>
 				</div>
 		    </div>
 		    
 			<div style="width:300px; height:500px; position:fixed; top:50%; left:50%; margin:-260px 0px 0px -150px;">
 		    <img src="../img/logo_gdd.png" alt="Cema" width="160" style="margin:0px 0px 50px 0px;">
-		    <br>
+		    <br><br>
 			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_cadastro_tipo_voce">Você</div>
 			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_cadastro_tipo_profissional">Profissinal</div>
 			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_cadastro_tipo_empresa">Empresa</div>
@@ -64,15 +64,15 @@
 				});
 				
 				$("#bt_cadastro_tipo_voce").click(function(){
-					$.mobile.changePage("cadastro.html", { transition: "fade", changeHash: false });
+					$.mobile.changePage("cadastro-voce.html", { transition: "fade", changeHash: false });
 				});
 				
 				$("#bt_cadastro_tipo_profissional").click(function(){
-					$.mobile.changePage("cadastro.html", { transition: "fade", changeHash: false });
+					$.mobile.changePage("cadastro-profissional.html", { transition: "fade", changeHash: false });
 				});
 				
 				$("#bt_cadastro_tipo_empresa").click(function(){
-					$.mobile.changePage("cadastro.html", { transition: "fade", changeHash: false });
+					$.mobile.changePage("cadastro-empresa.html", { transition: "fade", changeHash: false });
 				});
 				
 			</script>
