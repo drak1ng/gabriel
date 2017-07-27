@@ -56,8 +56,8 @@ body {
 }
 
 		    .menu-container { width:100%; height:100%; position:fixed; top:0px; left:0px; background-color:rgba(0,0,0,0.7); z-index:9999; }
-		    .menu-container-caixa { width:280px; height:100%; float:right; background:#FFF; }
-		    .menu-container-caixa-logo	{ width:140px; margin-top:50px; }
+		    .menu-container-caixa { width:250px; height:100%; float:right; background:#FFF; }
+		    .menu-container-caixa-logo	{ width:120px; margin-top:50px; }
 		    .menu-container-caixa-nome	{ text-align:center; font-family:'roboto'; padding-top:20px; font-size:20px; padding-bottom:50px; }
 		    .menu-container-caixa-menu1	{ font-family:'roboto'; margin:0px auto; width:140px; padding:15px 0px 15px 45px; background:url(../img/005.png) left center no-repeat; background-size:30px; text-transform:none; }
 		    .menu-container-caixa-menu2	{ font-family:'roboto'; margin:0px auto; width:140px; padding:15px 0px 15px 45px; background:url(../img/006.png) left center no-repeat; background-size:30px; text-transform:none; }

@@ -41,21 +41,8 @@
 
 			<div role="main" class="ui-content" style="text-align:center;">
 				
-
-			    <div class="menu-container">
-				    <div class="menu-container-caixa">
-					    <center><img src="../img/logo_gdd.png" class="menu-container-caixa-logo"></center>
-					    <div class="menu-container-caixa-nome">Marcos Sales</div>
-					    <div class="menu-container-caixa-menu1">Mensagens</div>
-					    <div class="menu-container-caixa-menu2">Orçamentos</div>
-					    <div class="menu-container-caixa-menu3">Eventos</div>
-					    <div class="menu-container-caixa-menu4">Sobre</div>
-					    <div class="menu-container-caixa-menu5">Configuração</div>
-				    </div>
-			    </div>
-				
 				<div id="bt-home-sair" style="min-width:10px; float:right; font-size:13px; text-transform:none;">Sair <i style="font-size:14px;" class="fa fa-sign-out" aria-hidden="true"></i></div>
-				<img src="../img/cema.png" alt="Cema" width="250" style="margin:-30px 0px 20px 0px;">
+				<img src="../img/cema.png" id='logo_teste' alt="Cema" width="250" style="margin:-30px 0px 20px 0px;">
 					
 				<div id="id_conteudo_home" style="text-align:center; padding:0px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:center; font-weight:normal;">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
@@ -93,6 +80,10 @@
 				
 				$.get('http://cema.projetotemporario.com.br/app_api/lista-unidades.php', function(data){
 					$('#id_conteudo_home').html(data);
+				});
+				
+				$('#logo_teste').click(function(){
+					$('.menu-container').show();
 				});
 				
 			</script>
