@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <title>GABRIEL</title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../js/cordova.js"></script>
+		<style>
+			.categorias				{ height:140px; background:#ebebeb; }
+			.categorias-box			{ height:140px; background-color:rgba(0,0,0,0.4); }
+			.categorias-titulo		{ text-align:center; color:#FFF; padding-top:50px; font-size:24px; font-weight:600; text-shadow: 0 0 5px #000000; }
+			.categorias-quantidade	{ text-align:center; color:#FFF; text-shadow: 0 0 5px #000000; }
+		</style>
+	</head>
+    <body>
+	    
+	    <div data-role="page">
+
+			<div role="main" class="ui-content" style="text-align:center;">
+				
+				<div class="topo">
+					<img src="../img/logo_gdd.png" class='topo-logo'>
+					<div class="topo-menu"></div>
+					<div class="topo-categorias"></div>
+				</div>
+				<div class="conteudo" style="padding:0px; margin:50px -15px -15px -15px;">
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/2300876/251548600/stock-photo-cutlery-in-the-kitchen-251548600.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Acessórios de Cozinha</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb9.shutterstock.com/display_pic_with_logo/472939/274969298/stock-photo-smart-house-home-automation-device-with-app-icons-man-uses-his-smartphone-with-smarthome-274969298.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Audio Vídeo Automação</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/606571/574583311/stock-photo-bathroom-interior-bathroom-mirror-with-a-stand-mirror-table-574583311.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Banho</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb9.shutterstock.com/display_pic_with_logo/249301/430097278/stock-photo-half-lighted-hall-in-a-loft-style-in-a-mexican-restaurant-with-open-kitchen-on-the-background-in-430097278.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Bares e Restaurantes</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb9.shutterstock.com/display_pic_with_logo/1448759/277683845/stock-photo-sunlight-coming-through-venetian-blinds-by-the-window-277683845.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Cortinas e Persianas</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/1464857/595692986/stock-photo-dark-brown-modern-kitchen-interior-595692986.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Cozinha</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/319582/112642544/stock-photo-milan-italy-september-people-visit-architecture-interiors-design-and-home-decoration-112642544.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Feiras e Exposições</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/319582/104870906/stock-photo-milan-march-a-woman-enters-paintings-galleries-during-miart-artnow-international-exhibition-104870906.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Galeria de Arte</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/1358701/532113406/stock-photo-luxury-beautiful-retro-edison-light-lamp-decor-532113406.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Ilumininação</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/449008/324288134/stock-photo-happy-kid-playing-with-toy-robot-at-home-innovation-technology-and-success-concept-324288134.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Kids</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/2117717/596355821/stock-photo-clothes-shop-costume-dress-fashion-store-style-concept-596355821.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Moda</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/914930/312295289/stock-photo-teapot-and-flower-home-decoration-concept-312295289.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Objetos e decoração</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/187633/284519087/stock-photo-wide-angle-view-of-busy-design-office-with-workers-at-desks-284519087.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Office</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/1198163/318471329/stock-photo-double-exposure-of-businessman-hand-working-with-new-modern-computer-and-business-strategy-as-318471329.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Profissionais</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/3805847/666615841/stock-photo-young-people-dancing-and-having-fun-in-summer-festival-party-outdoor-crowd-with-hands-up-666615841.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Promoções</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/165474620/560973166/stock-photo-bright-and-cozy-modern-bedroom-with-dressing-room-large-window-and-broad-window-sill-for-read-with-560973166.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Quarto</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/176618572/649015141/stock-photo-roof-coating-broom-649015141.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Revestimento</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/613630/234327256/stock-photo-modern-living-room-design-with-sofa-and-wooden-lamp-234327256.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Sala de estar</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb7.shutterstock.com/display_pic_with_logo/1690102/504372121/stock-photo-modern-dining-room-interior-with-warm-light-from-the-sun-relax-day-in-dining-room-on-free-day-and-504372121.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Sala de jantar</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/2117717/374805580/stock-photo-customer-service-working-communication-help-concept-374805580.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Serviços</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb9.shutterstock.com/display_pic_with_logo/563362/117330715/stock-photo-samples-of-carpet-117330715.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Tapetes e carpetes</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+					<div class="categorias" style="background:url(https://thumb1.shutterstock.com/display_pic_with_logo/277009/391991770/stock-photo-picture-of-verandah-with-modern-garden-furniture-391991770.jpg) center center no-repeat; background-size:cover;">
+						<div class="categorias-box">
+							<div class="categorias-titulo">Varanda e Jardim</div>
+							<div class="categorias-quantidade">120 cadastros</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<script>
+				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				
+				$('#home-rodape01').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
+				$('#home-rodape02').click(function(){ $.mobile.changePage("agendado.html", { transition: "fade", changeHash: false }); });
+				$('#home-rodape03').click(function(){ $.mobile.changePage("cancelar.html", { transition: "fade", changeHash: false }); });
+				$('#home-rodape04').click(function(){ $.mobile.changePage("meu-cadastro.html", { transition: "fade", changeHash: false }); });
+				$('#home-sair').click(function(){
+					window.localStorage.setItem('id_usuarios','');
+					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
+				});
+				
+				$('.topo-menu').click(function(){ $('.menu-container').show(); });
+				$('.topo-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
+				
+				$('#bt-home-sair').click(function(){
+					window.localStorage.setItem('id_usuarios','');
+					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
+				});
+				
+				$.get('http://cema.projetotemporario.com.br/app_api/lista-unidades.php', function(data){
+					$('#id_conteudo_home').html(data);
+				});
+				
+			</script>
+		
+		</div>
+    </body>
+</html>

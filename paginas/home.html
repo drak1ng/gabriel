@@ -51,7 +51,6 @@
 				</div>
 				
 			</div>
-		
 			
 			<script>
 				
@@ -67,18 +66,15 @@
 				});
 				
 				$('.topo-menu').click(function(){ $('.menu-container').show(); });
+				$('.topo-categorias').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
 				
 				$('#bt-home-sair').click(function(){
 					window.localStorage.setItem('id_usuarios','');
-					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });					
+					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
 				
 				$.get('http://cema.projetotemporario.com.br/app_api/lista-unidades.php', function(data){
 					$('#id_conteudo_home').html(data);
-				});
-				
-				$('#logo_teste').click(function(){
-					$('.menu-container').show();
 				});
 				
 			</script>
