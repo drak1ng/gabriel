@@ -56,6 +56,7 @@ body {
 }
 
 		    .menu-container { width:100%; height:100%; position:fixed; top:0px; left:0px; background-color:rgba(0,0,0,0.7); z-index:9999; display:none; }
+		    .menu-container-externo { width:calc(100% - 250px); height:100%; float:left;  }
 		    .menu-container-caixa { width:250px; height:100%; float:right; background:#FFF; }
 		    .menu-container-caixa-logo	{ width:120px; margin-top:50px; }
 		    .menu-container-caixa-nome	{ text-align:center; font-family:'roboto'; padding-top:20px; font-size:20px; padding-bottom:50px; }
