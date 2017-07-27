@@ -75,6 +75,11 @@ body {
 
 .page				{ background:#FFF !important; }
 
+.categorias				{ height:140px; background:#ebebeb; }
+.categorias-box			{ height:140px; background-color:rgba(0,0,0,0.4); }
+.categorias-titulo		{ text-align:center; color:#FFF; padding-top:50px; font-size:24px; font-weight:600; text-shadow: 0 0 5px #000000; }
+.categorias-quantidade	{ text-align:center; color:#FFF; text-shadow: 0 0 5px #000000; }
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
