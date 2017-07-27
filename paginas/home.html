@@ -66,6 +66,8 @@
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
 				
+				$('.topo-menu').click(function(){ $('.menu-container').show(); });
+				
 				$('#bt-home-sair').click(function(){
 					window.localStorage.setItem('id_usuarios','');
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });					
