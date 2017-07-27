@@ -62,6 +62,14 @@
 					$('.menu-container').hide();
 				});
 				
+				$('.menu-container-caixa-menu1').click(function(){ $.mobile.changePage("./paginas/mensagens.html", { transition: "none", changeHash: false }); });
+				$('.menu-container-caixa-menu2').click(function(){ $.mobile.changePage("./paginas/orcamentos.html", { transition: "none", changeHash: false }); });
+				$('.menu-container-caixa-menu3').click(function(){ $.mobile.changePage("./paginas/eventos.html", { transition: "none", changeHash: false }); });
+				$('.menu-container-caixa-menu4').click(function(){ $.mobile.changePage("./paginas/sobre.html", { transition: "none", changeHash: false }); });
+				$('.menu-container-caixa-menu5').click(function(){ $.mobile.changePage("./paginas/configuracao.html", { transition: "none", changeHash: false }); });
+				
+				
+				
 				var jaFicouOffline = 0;
 				
 				document.addEventListener("deviceready", onDeviceReady, true);
