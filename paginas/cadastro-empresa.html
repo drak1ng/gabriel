@@ -99,7 +99,7 @@
 					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_estado').val(data); });
 				});
 				
-				$("#bt_cadastro_salvar").click(function(){
+				$("#bt_empresa_cadastro_salvar").click(function(){
 					var nome = $('#cadastro_empresa_nome').val();
 					var sobrenome = $('#cadastro_empresa_sobrenome').val();
 					var nascimento = $('#cadastro_empresa_nascimento').val();

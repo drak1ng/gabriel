@@ -99,7 +99,7 @@
 					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_estado').val(data); });
 				});
 				
-				$("#bt_cadastro_salvar").click(function(){
+				$("#bt_profissional_cadastro_salvar").click(function(){
 					var nome = $('#cadastro_profissional_nome').val();
 					var sobrenome = $('#cadastro_profissional_sobrenome').val();
 					var nascimento = $('#cadastro_profissional_nascimento').val();
