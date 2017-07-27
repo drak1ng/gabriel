@@ -96,8 +96,8 @@
 					var nascimento = $('#cadastro_voce_nascimento').val();
 					var sexo = $('#cadastro_voce_sexo').val();
 					var email = $('#cadastro_voce_email').val();
-					var telefone = $('#cadastro_voce_telefone').val();
-					var celular = $('#cadastro_voce_celular').val();
+					var telefone_contato = $('#cadastro_voce_telefone').val();
+					var celular_contato = $('#cadastro_voce_celular').val();
 					var senha = $('#cadastro_voce_senha').val();
 					var confirme_senha = $('#cadastro_voce_confirme_senha').val();
 					
@@ -115,10 +115,8 @@
 					if(cep==""){ alert("O campo CEP deve ser preenchido"); return false; }
 					if(estado==""){ alert("O campo Estado deve ser preenchido"); return false; }
 					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
-					
-
-					
-					$.get("http://gabrieldesigndistrict.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone:telefone, celular:celular, senha:senha, responsavel_legal:responsavel_legal, documento:documento, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro }, function(data){
+										
+					$.get("http://gabrieldesigndistrict.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone_contato:telefone_contato, celular_contato:celular_contato, senha:senha, cep:cep, estado:estado, cidade:cidade }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){

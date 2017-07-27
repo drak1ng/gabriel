@@ -54,13 +54,16 @@
 						<option value="Masculino">Masculino</option>
 						<option value="Feminino">Feminino</option>
 					</select>
-					<input type="text" id="cadastro_profissional_telefone" placeholder="Telefone" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_profissional_celular" placeholder="Celular" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Dados de Login</h3>
 					<input type="email" id="cadastro_profissional_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="password" id="cadastro_profissional_senha" placeholder="Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="password" id="cadastro_profissional_confirme_senha" placeholder="Confirme a Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<br>
+					<h3>Dados para Contato</h3>
+					<input type="email" id="cadastro_profissional_contato_email" placeholder="E-mail para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="email" id="cadastro_profissional_contato_telefone" placeholder="Telefone para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="email" id="cadastro_profissional_contato_celular" placeholder="Celular para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Endereço</h3>					
 					<input type="tel" id="cadastro_profissional_cep" placeholder="Cep" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
@@ -85,8 +88,8 @@
 			<script>
 				
 				$('#cadastro_profissional_nascimento').mask('99/99/9999');
-				$('#cadastro_profissional_telefone').mask('(99) 9999-9999');
-				$('#cadastro_profissional_celular').mask('(99) 99999-9999');
+				$('#cadastro_profissional_contato_telefone').mask('(99) 9999-9999');
+				$('#cadastro_profissional_contato_celular').mask('(99) 99999-9999');
 				$('#cadastro_profissional_cep').mask('99999-999');
 				
 				$('#cadastro_profissional_cep').blur(function(){
@@ -102,10 +105,12 @@
 					var nascimento = $('#cadastro_profissional_nascimento').val();
 					var sexo = $('#cadastro_profissional_sexo').val();
 					var email = $('#cadastro_profissional_email').val();
-					var telefone = $('#cadastro_profissional_telefone').val();
-					var celular = $('#cadastro_profissional_celular').val();
 					var senha = $('#cadastro_profissional_senha').val();
 					var confirme_senha = $('#cadastro_profissional_confirme_senha').val();
+					
+					var email_contato = $('#cadastro_profissional_contato_email').val();
+					var telefone_contato = $('#cadastro_profissional_contato_telefone').val();
+					var celular_contato = $('#cadastro_profissional_contato_celular').val();
 					
 					var cep = $('#cadastro_profissional_cep').val();
 					var endereco = $('#cadastro_profissional_endereco').val();
@@ -129,9 +134,10 @@
 					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
 					if(bairro==""){ alert("O campo Bairro deve ser preenchido"); return false; }
 					
+					
 
 					
-					$.get("http://cema.projetotemporario.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone:telefone, celular:celular, senha:senha, responsavel_legal:responsavel_legal, documento:documento, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){

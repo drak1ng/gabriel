@@ -45,22 +45,26 @@
 			<div role="main" class="ui-content">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
-					<input type="text" id="cadastro_empresa_nome" placeholder="Nome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Sobrenome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_empresa_nascimento" placeholder="Nascimento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_nome" placeholder="Razão Social" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Nome Fantasia" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_nascimento" placeholder="CNPJ" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<select id="cadastro_empresa_sexo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 						<option value="">Sexo</option>
 						<option value=""></option>
 						<option value="Masculino">Masculino</option>
 						<option value="Feminino">Feminino</option>
 					</select>
-					<input type="text" id="cadastro_empresa_telefone" placeholder="Telefone" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_empresa_celular" placeholder="Celular" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Dados de Login</h3>
 					<input type="email" id="cadastro_empresa_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="password" id="cadastro_empresa_senha" placeholder="Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="password" id="cadastro_empresa_confirme_senha" placeholder="Confirme a Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<br>
+					<h3>Dados para Contato</h3>
+					<input type="email" id="cadastro_empresa_contato_nome" placeholder="Nome para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="email" id="cadastro_empresa_contato_email" placeholder="E-mail para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="phone" id="cadastro_empresa_contato_telefone" placeholder="Telefone para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="phone" id="cadastro_empresa_contato_celular" placeholder="Celular para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Endereço</h3>					
 					<input type="tel" id="cadastro_empresa_cep" placeholder="Cep" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
@@ -84,9 +88,8 @@
 			
 			<script>
 				
-				$('#cadastro_empresa_nascimento').mask('99/99/9999');
-				$('#cadastro_empresa_telefone').mask('(99) 9999-9999');
-				$('#cadastro_empresa_celular').mask('(99) 99999-9999');
+				$('#cadastro_empresa_contato_telefone').mask('(99) 9999-9999');
+				$('#cadastro_empresa_contato_celular').mask('(99) 99999-9999');
 				$('#cadastro_empresa_cep').mask('99999-999');
 				
 				$('#cadastro_empresa_cep').blur(function(){
@@ -102,10 +105,13 @@
 					var nascimento = $('#cadastro_empresa_nascimento').val();
 					var sexo = $('#cadastro_empresa_sexo').val();
 					var email = $('#cadastro_empresa_email').val();
-					var telefone = $('#cadastro_empresa_telefone').val();
-					var celular = $('#cadastro_empresa_celular').val();
 					var senha = $('#cadastro_empresa_senha').val();
 					var confirme_senha = $('#cadastro_empresa_confirme_senha').val();
+					
+					var nome_contato = $('#cadastro_empresa_contato_nome').val();
+					var email_contato = $('#cadastro_empresa_contato_email').val();
+					var telefone_contato = $('#cadastro_empresa_contato_telefone').val();
+					var celular_contato = $('#cadastro_empresa_contato_celular').val();
 					
 					var cep = $('#cadastro_empresa_cep').val();
 					var endereco = $('#cadastro_empresa_endereco').val();
@@ -115,8 +121,8 @@
 					var cidade = $('#cadastro_empresa_cidade').val();
 					var bairro = $('#cadastro_empresa_bairro').val();
 					
-					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
-					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
+					if(nome==""){ alert("O campo Razão Social deve ser preenchido"); return false; }
+					if(sobrenome==""){ alert("O campo Nome Fantasia deve ser preenchido"); return false; }
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
 					if(senha==""){ alert("O campo Senha deve ser preenchido"); return false; }
 					if(confirme_senha==""){ alert("O campo Confirme a Senha deve ser preenchido"); return false; }
@@ -129,9 +135,12 @@
 					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
 					if(bairro==""){ alert("O campo Bairro deve ser preenchido"); return false; }
 					
+					
 
 					
-					$.get("http://cema.projetotemporario.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone:telefone, celular:celular, senha:senha, responsavel_legal:responsavel_legal, documento:documento, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro }, function(data){
+
+					
+					$.get("http://cema.projetotemporario.com.br/app_api/cadastro.php", { nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
