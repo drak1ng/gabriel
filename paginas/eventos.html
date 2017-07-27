@@ -37,40 +37,21 @@
 	    <div data-role="page" style="background:#FFF;">
 		    <div class="topo">
 			    <div class="logotipo">
-				    <div style="margin:0px 80px; text-align:center; color:#214629;"><b>MARCAR CONSULTA<b></div>
+				    <div style="min-width:10px; float:left; color:#000;" id="bt_eventos_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>EVENTOS<b></div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div id="id_conteudo_cadastro_sucesso" style="text-align:center; padding:50px 0px 50px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify;">
-					<br><br>
-					<h1><b>SUCESSO!<b></h1>
-					<p style="font-size:13px; text-align:center; font-weight:normal;">Consulta marcada com sucesso!<br><br>Você pode conferir suas consulta em AGENDADO.</p>
-					<br><br>
-					<div style="border:1px solid #214629; border-radius:6px; background:#FFF; color:#214629; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_home_voltar">Clique aqui para voltar para a home</div>
-				</div>
-			</div>
-		
-			<br><br><br><br>
-		
-			<div class="botoes-rodape">
-				<div class="botoes-rodape-bloco1" id="marcar-obrigado-rodape01" style="background-image:url(../img/icon_01.png);">Nova</div>
-				<div class="botoes-rodape-bloco1" id="marcar-obrigado-rodape02" style="background-image:url(../img/icon_02.png);">Agendado</div>
-				<div class="botoes-rodape-bloco1" id="marcar-obrigado-rodape03" style="background-image:url(../img/icon_03.png);">Cancelar</div>
-				<div class="botoes-rodape-bloco2" id="marcar-obrigado-rodape04" style="background-image:url(../img/icon_04.png);">Cadastro</div>
+				
 			</div>
 		
 			
 			<script>
 				
-				$("#bt_home_voltar").click(function(){
+				$("#bt_eventos_voltar").click(function(){
 					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 				});
-				
-				$('#marcar-obrigado-rodape01').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
-				$('#marcar-obrigado-rodape02').click(function(){ $.mobile.changePage("agendado.html", { transition: "fade", changeHash: false }); });
-				$('#marcar-obrigado-rodape03').click(function(){ $.mobile.changePage("cancelar.html", { transition: "fade", changeHash: false }); });
-				$('#marcar-obrigado-rodape04').click(function(){ $.mobile.changePage("meu-cadastro.html", { transition: "fade", changeHash: false }); });
 				
 			</script>
 		
