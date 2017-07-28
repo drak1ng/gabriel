@@ -61,7 +61,7 @@
 				$('.topo-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/termos-uso.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#termos-uso-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api/categorias.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#categorias_conteudo').html(data); });
 				
 			</script>
 		
