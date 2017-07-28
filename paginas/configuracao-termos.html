@@ -38,32 +38,23 @@
 		    <div class="topo">
 			    <div class="logotipo">
 				    <div style="min-width:10px; float:left; color:#000;" id="bt_configuracao_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>CONFIGURAÇÃO<b></div>
+				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>TERMOS DE USO<b></div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:18px; text-transform:none;">Legal</div>
-				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_configuracao_termos">Termos de Uso</div>
-				
-				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:18px; text-transform:none;">Opções</div>
-				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_configuracao_sair">Sair do App</div>
+				<div class="conteudo" style="margin-top:5px;">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur semper egestas. Duis lobortis tellus quis leo lobortis aliquet. Duis nisi felis, aliquam vitae sem ut, scelerisque dignissim nulla. Aenean ac malesuada purus. Nulla eget velit aliquet nulla convallis dapibus. Cras accumsan fermentum pellentesque. Vivamus in magna rhoncus, dictum felis sit amet, commodo mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eget euismod turpis, sit amet laoreet lorem.
+					<br><br>
+					Cras gravida elementum lacus sed viverra. Donec a viverra odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus nulla ac elit gravida aliquam. Maecenas purus risus, viverra at risus vel, accumsan pulvinar erat. Aliquam aliquam commodo semper. Curabitur mattis, risus ac dictum fringilla, lacus leo gravida dui, non iaculis quam dolor in eros. Maecenas molestie neque nulla, euismod placerat ante sagittis eget. Donec eu lobortis turpis. Sed varius at nunc ut euismod. Pellentesque sit amet ante vitae felis volutpat fringilla.
+				</div>
 			</div>
 		
 			
 			<script>
 				
 				$("#bt_configuracao_voltar").click(function(){
-					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
-				});
-				
-				$("#bt_configuracao_termos").click(function(){
-					$.mobile.changePage("configuracao-termos.html", { transition: "fade", changeHash: false });
-				});
-				
-				$("#bt_configuracao_sair").click(function(){
-					window.localStorage.setItem('id_usuarios','');
-					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
+					$.mobile.changePage("configuracao.html", { transition: "fade", changeHash: false });
 				});
 				
 			</script>
