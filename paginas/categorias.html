@@ -58,8 +58,8 @@
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				
-				$('.topo-menu').click(function(){ $('.menu-container').show(); });
-				$('.topo-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
+				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
+				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/categorias.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#categorias_conteudo').html(data); });
 				
