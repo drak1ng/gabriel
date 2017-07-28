@@ -43,7 +43,7 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div class="conteudo" style="margin-top:5px;" id="termos-uso-conteudo">
+				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="termos-uso-conteudo">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
 						Aguarde carregando...
@@ -54,11 +54,14 @@
 			
 			<script>
 				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
 				$("#bt_configuracao_termos_voltar").click(function(){
 					$.mobile.changePage("configuracao.html", { transition: "fade", changeHash: false });
 				});
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/termos-uso.php", {}, function(data){ $('#termos-uso-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api/termos-uso.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#termos-uso-conteudo').html(data); });
 				
 			</script>
 		
