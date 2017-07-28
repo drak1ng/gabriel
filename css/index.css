@@ -80,6 +80,10 @@ body {
 .categorias-titulo		{ text-align:center; color:#FFF; padding-top:50px; font-size:24px; font-weight:600; text-shadow: 0 0 5px #000000; }
 .categorias-quantidade	{ text-align:center; color:#FFF; text-shadow: 0 0 5px #000000; }
 
+.lista-empresas			{ width:50%; height:190px; float:left; text-align:center; margin:0px; padding:0px; border:0px; margin-top:10px; }
+.lista-empresas-foto	{ width:120px; height:120px; margin:0px auto; border-radius:100px; background:center center no-repeat #000; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); }
+.lista-empresas-nome	{ padding:10px; }
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
