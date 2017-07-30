@@ -41,9 +41,12 @@
 				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Meu Cadastro<b></div>
 				</div>
 		    </div>
-
-			<div role="main" class="ui-content">
-
+			
+			<div class="conteudo" style="padding:0px; margin:50px 15px 15px 15px;" id="sobre_cadastro_conteudo">
+				<div style="padding-top:120px; text-align:center; font-size:13px;">
+					<img src="../img/loading.gif" width="110" height="10" /><br><br>
+					Aguarde carregando...
+				</div>
 			</div>
 		
 			
@@ -52,6 +55,11 @@
 				$("#bt_sobre_cadastro_voltar").click(function(){
 					$.mobile.changePage("sobre.html", { transition: "fade", changeHash: false });
 				});
+				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
+				$.get("http://gabrieldesigndistrict.com.br/app_api/meu-cadastro.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre_cadastro_conteudo').html(data); });
 				
 			</script>
 		
