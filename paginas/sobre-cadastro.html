@@ -37,37 +37,20 @@
 	    <div data-role="page" style="background:#FFF;">
 		    <div class="topo">
 			    <div class="logotipo">
-				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>SOBRE<b></div>
+				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_cadastro_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Meu Cadastro<b></div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:15px; text-transform:none;">Cadastro</div>
-				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_cadastro">Meu Cadastro</div>
-				
-				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:15px; text-transform:none;">Informações</div>
-				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_galeria">Galeria de Fotos</div>
-				<div style="margin:0px -15px 0px -15px; border-top:0px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_feeds">Feeds</div>
+
 			</div>
 		
 			
 			<script>
 				
-				$("#bt_sobre_voltar").click(function(){
-					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
-				});
-				
-				$("#bt_sobre_cadastro").click(function(){
-					$.mobile.changePage("sobre-cadastro.html", { transition: "fade", changeHash: false });
-				});
-				
-				$("#bt_sobre_galeria").click(function(){
-					$.mobile.changePage("sobre-galeria.html", { transition: "fade", changeHash: false });
-				});
-				
-				$("#bt_sobre_feeds").click(function(){
-					$.mobile.changePage("sobre-feeds.html", { transition: "fade", changeHash: false });
+				$("#bt_sobre_cadastro_voltar").click(function(){
+					$.mobile.changePage("sobre.html", { transition: "fade", changeHash: false });
 				});
 				
 			</script>
