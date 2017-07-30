@@ -99,8 +99,8 @@ body {
 .mensagens-conversa-meu						{ width:80%; float:left; border:1px solid #004F68; border-radius:6px; color:#004F68; padding:10px; font-size:15px; margin-bottom:10px; }
 .mensagens-conversa-meu span				{ display:block; font-weight:600; font-size:12px; }
 .mensagens-formulario						{ position:fixed; left:0px; bottom:0px; width:100%; border-top:1px solid #000; height:40px; }
-.mensagens-formulario input[type=text]		{ width:calc(100% - 80px); border:0px; background:none; font-weight:300; float:left; padding:10px 5px; font-size:15px; }
-.mensagens-formulario input[type=submit]	{ width:70px; border:0px; background:none; font-weight:600; text-align:center; float:right; padding:10px 0px; font-size:15px; }
+.mensagens-formulario input[type=text]		{ width:calc(100% - 80px); border:0px; background:none; font-weight:300; float:left; padding:10px 5px; font-size:15px; outline:none; }
+.mensagens-formulario input[type=submit]	{ width:70px; border:0px; background:none; font-weight:600; text-align:center; float:right; padding:10px 0px; font-size:15px; outline:none; }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
