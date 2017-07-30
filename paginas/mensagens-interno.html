@@ -37,12 +37,12 @@
 	    <div data-role="page" style="background:#FFF;">
 		    <div class="topo">
 			    <div class="logotipo">
-				    <div style="min-width:10px; float:left; color:#000;" id="bt_mensagens_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>MENSAGENS<b></div>
+				    <div style="min-width:10px; float:left; color:#000;" id="bt_mensagens_interna_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>EVENTOS<b></div>
 				</div>
 		    </div>
 
-			<div class="conteudo" style="padding:0px; margin:50px 0px 0px 0px;" id="mensagens_conteudo">
+			<div class="conteudo" style="padding:0px; margin:50px 15px 15px 15px;" id="mensagens_interno_conteudo">
 				<div style="padding-top:120px; text-align:center; font-size:13px;">
 					<img src="../img/loading.gif" width="110" height="10" /><br><br>
 					Aguarde carregando...
@@ -52,14 +52,15 @@
 			
 			<script>
 				
-				$("#bt_mensagens_voltar").click(function(){
-					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
+				$("#bt_mensagens_interna_voltar").click(function(){
+					$.mobile.changePage("mensagem.html", { transition: "fade", changeHash: false });
 				});
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var id_mensagem = window.localStorage.getItem('id_mensagem');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/mensagens.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#mensagens_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api/mensagens-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_mensagem:id_mensagem }, function(data){ $('#mensagens_interno_conteudo').html(data); });
 				
 			</script>
 		
