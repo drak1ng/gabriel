@@ -59,7 +59,7 @@
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/meu-cadastro.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre_cadastro_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api/meu-cadastro.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre_cadastro_conteudo').html(data); $('#sobre_cadastro_conteudo').enhanceWithin(); });
 				
 			</script>
 		
