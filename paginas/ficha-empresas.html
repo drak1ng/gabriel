@@ -58,12 +58,14 @@
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_categoria = window.localStorage.getItem('id_categoria');
+				var id_empresa = window.localStorage.getItem('id_empresa');
+				
 				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('.topo2-categorias').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
 				
-				//$.get("http://gabrieldesigndistrict.com.br/app_api/lista_empresas.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_categoria:id_categoria }, function(data){ $('#lista_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api/lista_empresas.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_categoria:id_categoria, id_empresa:id_empresa }, function(data){ $('#empresa_conteudo').html(data); });
 				
 			</script>
 		
