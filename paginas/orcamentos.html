@@ -42,8 +42,11 @@
 				</div>
 		    </div>
 
-			<div role="main" class="ui-content">
-				
+			<div class="conteudo" style="padding:0px; margin:50px 0px 0px 0px;" id="orcamentos_conteudo">
+				<div style="padding-top:120px; text-align:center; font-size:13px;">
+					<img src="../img/loading.gif" width="110" height="10" /><br><br>
+					Aguarde carregando...
+				</div>
 			</div>
 		
 			
@@ -52,6 +55,11 @@
 				$("#bt_orcamento_voltar").click(function(){
 					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 				});
+				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
+				$.get("http://gabrieldesigndistrict.com.br/app_api/orcamentos.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#orcamentos_conteudo').html(data); });
 				
 			</script>
 		
