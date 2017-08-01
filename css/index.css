@@ -125,7 +125,8 @@ body {
 
 .empresa-ficha-feeds								{ padding-top:15px; display:none; }
 .empresa-ficha-feeds-bloco							{ padding-bottom:30px; }
-.empresa-ficha-feeds-bloco-imagem					{ width:100% !important; height:auto !important; }
+.empresa-ficha-feeds-bloco-imagem					{ margin:0px -15px; }
+.empresa-ficha-feeds-bloco-imagem img				{ width:100% !important; height:auto !important; }
 .empresa-ficha-feeds-bloco-titulo					{ padding-top:10px; }
 .empresa-ficha-feeds-bloco-titulo-imagem			{ width:50px; height:50px; float:left; background:center center no-repeat #ebebeb; background-size:cover; border-radius:100px; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); }
 .empresa-ficha-feeds-bloco-titulo-texto				{ margin-left:60px; margin-right:40px; font-size:18px; font-weight:600; padding-top:4px; }
