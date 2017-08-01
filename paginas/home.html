@@ -44,10 +44,12 @@
 					<div class="topo2-menu"></div>
 					<div class="topo2-categorias"></div>
 				</div>
-				<div class="conteudo">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur semper egestas. Duis lobortis tellus quis leo lobortis aliquet. Duis nisi felis, aliquam vitae sem ut, scelerisque dignissim nulla. Aenean ac malesuada purus. Nulla eget velit aliquet nulla convallis dapibus. Cras accumsan fermentum pellentesque. Vivamus in magna rhoncus, dictum felis sit amet, commodo mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eget euismod turpis, sit amet laoreet lorem.
-					<br><br>
-					Cras gravida elementum lacus sed viverra. Donec a viverra odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus nulla ac elit gravida aliquam. Maecenas purus risus, viverra at risus vel, accumsan pulvinar erat. Aliquam aliquam commodo semper. Curabitur mattis, risus ac dictum fringilla, lacus leo gravida dui, non iaculis quam dolor in eros. Maecenas molestie neque nulla, euismod placerat ante sagittis eget. Donec eu lobortis turpis. Sed varius at nunc ut euismod. Pellentesque sit amet ante vitae felis volutpat fringilla.
+				
+				<div class="conteudo" id="home_conteudo">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
 				</div>
 				
 			</div>
@@ -55,6 +57,7 @@
 			<script>
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				
 				$('#home-rodape01').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('#home-rodape02').click(function(){ $.mobile.changePage("agendado.html", { transition: "fade", changeHash: false }); });
@@ -76,6 +79,8 @@
 				$.get('http://cema.projetotemporario.com.br/app_api/lista-unidades.php', function(data){
 					$('#id_conteudo_home').html(data);
 				});
+				
+				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
 				
 			</script>
 		
