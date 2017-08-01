@@ -60,7 +60,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_mensagem = window.localStorage.getItem('id_mensagem');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/mensagens-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_mensagem:id_mensagem }, function(data){ $('#mensagens_interno_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api/mensagens-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_mensagem:id_mensagem }, function(data){ $('#mensagens_interno_conteudo').html(data); 	var div = $('#mensagens-listagem'); div.prop('scrollTop', div.prop('scrollHeight')); });
 				
 			</script>
 		
