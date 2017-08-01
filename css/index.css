@@ -123,6 +123,7 @@ body {
 .empresa-ficha-galeria-bloco-imagem					{ height:150px; border-radius:6px; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); }
 .empresa-ficha-galeria-bloco-titulo					{ width:calc(100% - 40px); float:left; padding-top:8px; font-size:15px; color:#000; font-weight:600; }
 .empresa-ficha-galeria-bloco-gostei					{ width:30px; height:40px; float:right; background:url(../img/015.png) center center no-repeat; background-size:30px; margin-right:10px; }
+.empresa-ficha-galeria-bloco-gostei-on				{ width:30px; height:40px; float:right; background:url(../img/015_on.png) center center no-repeat; background-size:30px; margin-right:10px; }
 
 .empresa-ficha-feeds								{ padding-top:15px; display:none; }
 .empresa-ficha-feeds-bloco							{ padding-bottom:30px; }
@@ -134,6 +135,7 @@ body {
 .empresa-ficha-feeds-bloco-titulo-texto span		{ display:block; font-size:13px; font-weight:300; }
 .empresa-ficha-feeds-bloco-texto					{ font-size:14px; line-height:20px; padding-top:10px; }
 .empresa-ficha-feeds-bloco-gostei					{ width:30px; height:40px; float:right; background:url(../img/015.png) center center no-repeat; background-size:30px; margin-right:10px; }
+.empresa-ficha-feeds-bloco-gostei-on				{ width:30px; height:40px; float:right; background:url(../img/015_on.png) center center no-repeat; background-size:30px; margin-right:10px; }
 
 .empresa-ficha-contato								{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .empresa-ficha-contato-caixa						{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
