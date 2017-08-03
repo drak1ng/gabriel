@@ -47,13 +47,26 @@
 				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_cadastro">Meu Cadastro</div>
 				<div style="margin:0px -15px 0px -15px; border-top:0px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_imagem">Minha Imagem</div>
 				
-				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:15px; text-transform:none;">Informações</div>
+				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:15px; text-transform:none;" id="titulo_sobre_info">Informações</div>
 				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_galeria">Galeria de Fotos</div>
 				<div style="margin:0px -15px 0px -15px; border-top:0px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_feeds">Feeds</div>
 			</div>
 		
 			
 			<script>
+				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
+				if(tipo_usuarios=="profissional" || tipo_usuarios=="empresa"){
+					$('#bt_sobre_galeria').show();
+					$('#bt_sobre_feeds').show();
+					$('#titulo_sobre_info').show();
+				}else{
+					$('#bt_sobre_galeria').hide();
+					$('#bt_sobre_feeds').hide();
+					$('#titulo_sobre_info').hide();
+				}
 				
 				$("#bt_sobre_voltar").click(function(){
 					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
