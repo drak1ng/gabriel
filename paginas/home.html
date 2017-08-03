@@ -102,7 +102,28 @@
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
 				
-		
+				$('.btfoto').click(function(){
+					$.get("http://gabrieldesigndistrict.com.br/app_api/galerias-options.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#postagem_galeria').html(data); });
+					$('.home-foto-postagem').show();
+				})
+				
+				$('#postagem_tipo').change(function(){
+					if($('#postagem_tipo').val()=="galeria"){
+						$('#postagem_galeria_caixa').show();
+					}else{
+						$('#postagem_galeria_caixa').hide();
+					}
+				});
+				
+				$('#fechar-postagem').click(function(){
+					$('.home-foto-postagem').hide();
+				 	$('#postagem_tipo').val('');
+					$('#postagem_galeria').val('');
+					$('#postagem_comentario').val('');
+				});
+				
+				
+				
 			</script>
 		
 		</div>
