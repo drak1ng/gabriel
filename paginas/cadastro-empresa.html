@@ -102,6 +102,18 @@
 				});
 				
 				$("#bt_empresa_cadastro_salvar").click(function(){
+					
+
+					
+					var checked = [];
+					$("input[name='categoria[]']:checked").each(function(){
+					    checked.push(parseInt($(this).val()));
+					});
+					
+					var str = checked.join(';');
+					
+					alert(str);
+					
 					var nome = $('#cadastro_empresa_nome').val();
 					var sobrenome = $('#cadastro_empresa_sobrenome').val();
 					var nascimento = $('#cadastro_empresa_nascimento').val();
