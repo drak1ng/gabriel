@@ -100,10 +100,6 @@
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
 				
-				$.get('http://cema.projetotemporario.com.br/app_api/lista-unidades.php', function(data){
-					$('#id_conteudo_home').html(data);
-				});
-				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
 				
 				$('.btfoto').click(function(){
