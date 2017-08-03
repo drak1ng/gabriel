@@ -159,13 +159,7 @@ body {
 .sobre-feeds-bloco									{ padding:20px 0px; }
 .sobre-feeds-bloco-imagem							{ width:80px; height:80px; float:left; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); border:4px; }
 .sobre-bloco-titulo									{ margin:10px 90px 10px 90px; }
-.sobre-bloco-remover								{ width:80px; height:80px; float:right; }
-
-
-sobre-feeds-bloco" style="margin:0px -15px;">
-				<div class="sobre-feeds-bloco-imagem"><img src="http://gabrieldesigndistrict.com.br/upload_arquivos/'.substr($regis_02['imagem'],0,6).'/'.$regis_02['imagem'].'" /></div>
-				<div class="sobre-bloco-titulo">Publicado em '.$data.'</div>
-				<div class="sobre-bloco-remover
+.sobre-bloco-remover								{ width:80px; height:80px; float:right; background:url(../img/018.png) center center no-repeat; background-size:60px; }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
