@@ -156,10 +156,10 @@ body {
 .empresa-ficha-orcamento-caixa						{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
 
-.sobre-feeds-bloco									{ padding:20px 0px; }
+.sobre-feeds-bloco									{ padding:5px 0px; }
 .sobre-feeds-bloco-imagem							{ width:80px; height:80px; float:left; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); border:4px; }
-.sobre-bloco-titulo									{ margin:10px 90px 10px 90px; }
-.sobre-bloco-remover								{ width:80px; height:80px; float:right; background:url(../img/018.png) center center no-repeat; background-size:60px; }
+.sobre-bloco-titulo									{ margin:10px 50px 10px 90px; text-align:left; font-size:15px; color:#000; }
+.sobre-bloco-remover								{ width:40px; height:80px; float:right; background:url(../img/018.png) center center no-repeat; background-size:30px; }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
