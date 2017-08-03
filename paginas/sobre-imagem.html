@@ -43,15 +43,25 @@
 		    </div>
 
 			<div role="main" class="ui-content">
-
+				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="sobre-imagem-conteudo">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
+				</div>
 			</div>
 		
 			
 			<script>
 				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
 				$("#bt_sobre_imagem_voltar").click(function(){
 					$.mobile.changePage("sobre.html", { transition: "fade", changeHash: false });
 				});
+				
+				$.get("http://gabrieldesigndistrict.com.br/app_api/minha-imagem.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-imagem-conteudo').html(data); });
 				
 			</script>
 		
