@@ -38,6 +38,7 @@
 		    <div class="topo">
 			    <div class="logotipo">
 				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_galeria_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:right; color:#000;" id="bt_sobre_galeria_adicionar"><i class="fa fa-plus" aria-hidden="true"></i></div>
 				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Galeria de Fotos<b></div>
 				</div>
 		    </div>
@@ -47,6 +48,15 @@
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
 						Aguarde carregando...
+					</div>
+				</div>
+				
+				<div class="sobre-galeria-novo">
+					<div class="sobre-galeria-novo-caixa">
+						<div id="fechar-novo" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
+						<h1 style='margin:13px 0px 20px 0px; text-align:left;'>Nova Galeria</h1>
+						<input type="text" id="nova_nome" placeholder="Nome da Galeria" style="width:calc(100%); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
+						<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_nova_categoria_enviar">Criar Categoria</div>
 					</div>
 				</div>
 			</div>
@@ -60,6 +70,20 @@
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
+				$("#bt_sobre_galeria_adicionar").click(function(){
+					$(".sobre-feeds-novo").show();
+				});
+				
+				$('#bt_nova_categoria_enviar').click(function(){
+					var nome = $('#nova_nome').val();
+					
+					if(nova_nome==""){ alert('Você deve preencher o Nome da Galeria!'); return false; }
+					
+					$.get("http://gabrieldesigndistrict.com.br/app_api/nova-galeria.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, nome_galeria:nova_nome }, function(data){
+						$.get("http://gabrieldesigndistrict.com.br/app_api/minhas-galeria.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-galeria-conteudo').html(data); });
+					});
+				});
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/minhas-galeria.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-galeria-conteudo').html(data); });
 				
