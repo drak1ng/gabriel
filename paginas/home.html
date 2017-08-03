@@ -52,6 +52,31 @@
 					</div>
 				</div>
 				
+				<div class='btfoto'></div>
+				
+				<div class="home-foto-postagem">
+					<div class="home-foto-postagem-caixa">
+						<div id="fechar-postagem" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
+						<h1 style='margin:13px 0px 20px 0px; text-align:left;'>Enviar Foto</h1>
+						<select id="postagem_tipo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+							<option value="">Enviar para</option>
+							<option value=""></option>
+							<option value="galeria">Galeria</option>
+							<option value="feed">Feed</option>
+						</select>
+						<select id="postagem_galeria" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+							<option value="">Galerias</option>
+							<option value=""></option>
+							<option value="galeria1">Galeria1</option>
+							<option value="galeria2">Galeria2</option>
+							<option value="galeria3">Galeria3</option>
+							<option value="galeria4">Galeria4</option>
+						</select>
+						<input type="text" id="postagem_comentario" placeholder="Comentário" style="width:calc(100% - 22px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
+						<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_postagem_enviar">Selecionar Imagem</div>
+					</div>
+				</div>
+				
 			</div>
 			
 			<script>
@@ -81,6 +106,17 @@
 				});
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
+				
+				$('.btfoto').click(function(){
+					$('.home-foto-postagem').show();
+				})
+				
+				$('#fechar-postagem').click(function(){
+					$('.home-foto-postagem').hide();
+				 	$('#postagem_tipo').val('');
+					$('#postagem_galeria').val('');
+					$('#postagem_comentario').val('');
+				});
 				
 			</script>
 		

@@ -155,11 +155,15 @@ body {
 .empresa-ficha-orcamento							{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .empresa-ficha-orcamento-caixa						{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
+.home-foto-postagem									{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
+.home-foto-postagem-caixa							{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
 .sobre-feeds-bloco									{ padding:5px 0px; }
 .sobre-feeds-bloco-imagem							{ width:80px; height:80px; float:left; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); border:4px; }
 .sobre-bloco-titulo									{ margin:10px 50px 10px 90px; text-align:left; font-size:15px; color:#000; }
 .sobre-bloco-remover								{ width:40px; height:80px; float:right; background:url(../img/018.png) center center no-repeat; background-size:30px; }
+
+.btfoto												{ background:url(../img/019.png) center center no-repeat #000; background-size:30px; border-radius:100px; width:60px; height:60px; position:fixed; bottom:10px; right:10px; -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2); box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2); }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
