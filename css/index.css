@@ -156,7 +156,7 @@ body {
 .empresa-ficha-orcamento-caixa						{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
 .home-foto-postagem									{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
-.home-foto-postagem-caixa							{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
+.home-foto-postagem-caixa							{ width:280px; height:270px; position:fixed; top:50%; left:50%; margin:-135px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
 .sobre-feeds-bloco									{ padding:5px 0px; }
 .sobre-feeds-bloco-imagem							{ width:80px; height:80px; float:left; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); border:4px; }
