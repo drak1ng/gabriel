@@ -102,40 +102,7 @@
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
 				
-				$('.btfoto').click(function(){
-					$.get("http://gabrieldesigndistrict.com.br/app_api/galerias-options.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#postagem_galeria').html(data); });
-					$('.home-foto-postagem').show();
-				})
-				
-				$('#postagem_tipo').change(function(){
-					if($('#postagem_tipo').val()=="galeria"){
-						$('#postagem_galeria_caixa').show();
-					}else{
-						$('#postagem_galeria_caixa').hide();
-					}
-				});
-				
-				$('#fechar-postagem').click(function(){
-					$('.home-foto-postagem').hide();
-				 	$('#postagem_tipo').val('');
-					$('#postagem_galeria').val('');
-					$('#postagem_comentario').val('');
-				});
-				
-				$('#bt_postagem_enviar').click(function(){
-					var tipo = $('#postagem_tipo').val();
-					if(tipo=="galeria"){
-						if($('#postagem_galeria').val()==""){ alert('Selecione uma Galeria') return false; }
-					}
-					
-					$('#upload_file_id2').trigger('click');
-				});
-				
-				$('#upload_file_id').on('change', function(){
-					$('#aguarde-carregando2').show();
-					$('#foto_form2').submit();
-				});
-				
+		
 			</script>
 		
 		</div>
