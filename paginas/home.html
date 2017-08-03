@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!--
     Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
     distributed with this work for additional information
@@ -9,9 +8,7 @@
     to you under the Apache License, Version 2.0 (the
     "License"); you may not use this file except in compliance
     with the License.  You may obtain a copy of the License at
-
     http://www.apache.org/licenses/LICENSE-2.0
-
     Unless required by applicable law or agreed to in writing,
     software distributed under the License is distributed on an
     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -54,7 +51,24 @@
 				
 				<div class='btfoto'></div>
 				
-				
+				<div class="home-foto-postagem">
+					<div class="home-foto-postagem-caixa">
+						<div id="fechar-postagem" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
+						<h1 style='margin:13px 0px 20px 0px; text-align:left;'>Enviar Foto</h1>
+						<select id="postagem_tipo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+							<option value="galeria" selected>Galeria</option>
+							<option value="feed">Feed</option>
+						</select>
+						<div id="postagem_galeria_caixa">
+						<select id="postagem_galeria" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+							<option value="">Galerias</option>
+							<option value=""></option>
+						</select>
+						</div>
+						<input type="text" id="postagem_comentario" placeholder="Comentário" style="width:calc(100%); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
+						<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_postagem_enviar">Selecionar Imagem</div>
+					</div>
+				</div>
 				
 			</div>
 			
@@ -62,8 +76,6 @@
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
-				
-				$('input[name=id_usuarios]').val(id_usuarios);
 				
 				$('#home-rodape01').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('#home-rodape02').click(function(){ $.mobile.changePage("agendado.html", { transition: "fade", changeHash: false }); });
@@ -80,6 +92,10 @@
 				$('#bt-home-sair').click(function(){
 					window.localStorage.setItem('id_usuarios','');
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
+				});
+				
+				$.get('http://cema.projetotemporario.com.br/app_api/lista-unidades.php', function(data){
+					$('#id_conteudo_home').html(data);
 				});
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
@@ -103,28 +119,6 @@
 					$('#postagem_galeria').val('');
 					$('#postagem_comentario').val('');
 				});
-				
-				$('#bt_postagem_enviar').click(function(){
-					var tipo = $('#postagem_tipo').val();
-					if(tipo=="galeria"){
-						if($('#postagem_galeria').val()==""){ alert('Selecione uma Galeria') return false; }
-					}
-					
-					$('#upload_file_id2').trigger('click');
-				});
-				
-				$('#upload_file_id').on('change', function(){
-					$('#aguarde-carregando2').show();
-					$('#foto_form2').submit();
-				});
-				
-				$('#iframe_foto').on('load', function(){
-			        setTimeout("recarregarHome()",100);
-			    });
-			    
-			    function recarregarHome(){
-					$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
-			    }
 				
 			</script>
 		
