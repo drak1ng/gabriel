@@ -131,11 +131,12 @@
 					if(tipo=="galeria"){
 						if($('#postagem_galeria').val()==""){ alert('Selecione uma Galeria'); return false; }
 					}
-					
 					$('#upload_file_id2').trigger('click');
 				});
 				
+				
 				$('#upload_file_id2').on('change', function(){
+					$('.home-foto-postagem').hide();
 					$('#aguarde-carregando2').show();
 					$('#foto_form2').submit();
 				});
