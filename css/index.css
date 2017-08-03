@@ -155,6 +155,18 @@ body {
 .empresa-ficha-orcamento							{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .empresa-ficha-orcamento-caixa						{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
+
+.sobre-feeds-bloco									{ padding:20px 0px; }
+.sobre-feeds-bloco-imagem							{ width:80px; height:80px; float:left; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); border:4px; }
+.sobre-bloco-titulo									{ margin:10px 90px 10px 90px; }
+.sobre-bloco-remover								{ width:80px; height:80px; float:right; }
+
+
+sobre-feeds-bloco" style="margin:0px -15px;">
+				<div class="sobre-feeds-bloco-imagem"><img src="http://gabrieldesigndistrict.com.br/upload_arquivos/'.substr($regis_02['imagem'],0,6).'/'.$regis_02['imagem'].'" /></div>
+				<div class="sobre-bloco-titulo">Publicado em '.$data.'</div>
+				<div class="sobre-bloco-remover
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
