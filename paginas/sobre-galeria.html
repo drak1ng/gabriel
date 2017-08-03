@@ -83,9 +83,7 @@
 				$('#bt_nova_categoria_enviar').click(function(){
 					var nome = $('#nova_nome').val();
 					
-					alert("Olá entrei");
-					
-					if(nova_nome==""){ alert('Você deve preencher o Nome da Galeria!'); return false; }
+					if(nome==""){ alert('Você deve preencher o Nome da Galeria!'); return false; }
 					
 					$.get("http://gabrieldesigndistrict.com.br/app_api/nova-galeria.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, nome_galeria:nova_nome }, function(data){
 						var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
