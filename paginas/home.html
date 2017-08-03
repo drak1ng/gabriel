@@ -87,6 +87,8 @@
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				
+				$('input[name=id_usuarios]').val(id_usuarios);
+				
 				$('#home-rodape01').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('#home-rodape02').click(function(){ $.mobile.changePage("agendado.html", { transition: "fade", changeHash: false }); });
 				$('#home-rodape03').click(function(){ $.mobile.changePage("cancelar.html", { transition: "fade", changeHash: false }); });
