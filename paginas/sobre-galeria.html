@@ -75,6 +75,11 @@
 					$(".sobre-galeria-novo").show();
 				});
 				
+				$('#fechar-novo').click(function(){
+					$('.sobre-galeria-novo').hide();
+				 	$('#nova_nome').val('');
+				});
+				
 				$('#bt_nova_categoria_enviar').click(function(){
 					var nome = $('#nova_nome').val();
 					
