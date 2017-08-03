@@ -45,6 +45,7 @@
 			<div role="main" class="ui-content">
 				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:15px; text-transform:none;">Cadastro</div>
 				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_cadastro">Meu Cadastro</div>
+				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_imagem">Minha Imagem</div>
 				
 				<div style="padding:30px 0px 10px 0px; font-family:'roboto'; font-weight:600; font-size:15px; text-transform:none;">Informações</div>
 				<div style="margin:0px -15px 0px -15px; border-top:1px solid #000; border-bottom:1px solid #000; padding:15px; font-family:'roboto'; font-weight:300; font-size:15px; text-transform:none;" id="bt_sobre_galeria">Galeria de Fotos</div>
@@ -60,6 +61,10 @@
 				
 				$("#bt_sobre_cadastro").click(function(){
 					$.mobile.changePage("sobre-cadastro.html", { transition: "fade", changeHash: false });
+				});
+				
+				$("#bt_sobre_imagem").click(function(){
+					$.mobile.changePage("sobre-imagem.html", { transition: "fade", changeHash: false });
 				});
 				
 				$("#bt_sobre_galeria").click(function(){

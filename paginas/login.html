@@ -72,6 +72,7 @@
 							window.localStorage.setItem('nome_usuarios',res[1]);
 							window.localStorage.setItem('tipo_usuarios',res[2]);
 							$('.menu-container-caixa-nome').html(res[1]);
+							$('.menu-container-caixa-logo').attr('src',res[3]);
 							$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
 						}
 					});
