@@ -52,7 +52,7 @@
 				<div class='btfoto'></div>
 				
 				<div class="home-foto-postagem">
-				<form action='http://gabrieldesigndistrict.com.br/app_api/upload-postagem.php' method='POST' id='foto_form2' enctype='multipart/form-data' target='iframe_foto'>
+				<form action='http://gabrieldesigndistrict.com.br/app_api_v2.0.1/upload-postagem.php' method='POST' id='foto_form2' enctype='multipart/form-data' target='iframe_foto'>
 					<div class="home-foto-postagem-caixa">
 						<div id="fechar-postagem" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
 						<h1 style='margin:13px 0px 20px 0px; text-align:left;'>Enviar Foto</h1>
@@ -106,10 +106,10 @@
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
 				
 				$('.btfoto').click(function(){
-					$.get("http://gabrieldesigndistrict.com.br/app_api/galerias-options.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#postagem_galeria').html(data); });
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/galerias-options.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#postagem_galeria').html(data); });
 					$('.home-foto-postagem').show();
 				})
 				
@@ -149,7 +149,7 @@
 			    
 			    function recarregarHome(){
 					$('#aguarde-carregando2').hide();
-					$.get("http://gabrieldesigndistrict.com.br/app_api/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
 			    }
 				
 			</script>

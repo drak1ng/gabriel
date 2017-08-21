@@ -93,10 +93,10 @@
 				$('#cadastro_profissional_cep').mask('99999-999');
 				
 				$('#cadastro_profissional_cep').blur(function(){
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'endereco', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_endereco').val(data); });
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'bairro', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_bairro').val(data); });
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'cidade', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_cidade').val(data); });
-					$.get("http://cema.projetotemporario.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_estado').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'endereco', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_endereco').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'bairro', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_bairro').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'cidade', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_cidade').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'estado', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_estado').val(data); });
 				});
 				
 				$("#bt_profissional_cadastro_salvar").click(function(){
@@ -137,7 +137,7 @@
 					
 
 					
-					$.get("http://gabrieldesigndistrict.com.br/app_api/cadastro.php", { tipo:'profissional', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:'1' }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'profissional', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:'1' }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){

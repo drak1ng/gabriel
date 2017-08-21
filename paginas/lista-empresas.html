@@ -63,7 +63,7 @@
 				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('.topo2-categorias').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/lista_empresas.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_categoria:id_categoria }, function(data){ $('#lista_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/lista_empresas.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_categoria:id_categoria }, function(data){ $('#lista_conteudo').html(data); });
 				
 			</script>
 		

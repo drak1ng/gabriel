@@ -61,7 +61,7 @@
 					$.mobile.changePage("sobre.html", { transition: "fade", changeHash: false });
 				});
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/minha-imagem.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-imagem-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minha-imagem.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-imagem-conteudo').html(data); });
 				
 			</script>
 		

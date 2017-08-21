@@ -63,7 +63,7 @@
 					$.mobile.changePage("sobre.html", { transition: "fade", changeHash: false });
 				});
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/meus-feeds.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-feeds-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/meus-feeds.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-feeds-conteudo').html(data); });
 				
 			</script>
 		

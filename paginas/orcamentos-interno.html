@@ -60,7 +60,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_orcamento = window.localStorage.getItem('id_orcamento');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/orcamentos-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_orcamento:id_orcamento }, function(data){ $('#orcamentos_interno_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/orcamentos-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_orcamento:id_orcamento }, function(data){ $('#orcamentos_interno_conteudo').html(data); });
 				
 			</script>
 		

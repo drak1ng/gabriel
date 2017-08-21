@@ -67,7 +67,7 @@
 				
 				var unidade = window.localStorage.getItem('unidade');
 				
-				$.get("http://cema.projetotemporario.com.br/app_api/especialidades.php", { unidade:unidade }, function(data){
+				$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/especialidades.php", { unidade:unidade }, function(data){
 					$('#id_conteudo_especialidades').html(data);
 				});
 				

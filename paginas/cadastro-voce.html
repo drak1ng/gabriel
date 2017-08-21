@@ -86,8 +86,8 @@
 				$('#cadastro_voce_cep').mask('99999-999');
 				
 				$('#cadastro_voce_cep').blur(function(){
-					$.get("http://gabrieldesigndistrict.com.br/app_api/cep.php", { tipo:'cidade', cep:$('#cadastro_voce_cep').val() }, function(data){ $('#cadastro_voce_cidade').val(data); });
-					$.get("http://gabrieldesigndistrict.com.br/app_api/cep.php", { tipo:'estado', cep:$('#cadastro_voce_cep').val() }, function(data){ $('#cadastro_voce_estado').val(data); });
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cep.php", { tipo:'cidade', cep:$('#cadastro_voce_cep').val() }, function(data){ $('#cadastro_voce_cidade').val(data); });
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cep.php", { tipo:'estado', cep:$('#cadastro_voce_cep').val() }, function(data){ $('#cadastro_voce_estado').val(data); });
 				});
 				
 				$("#bt_cadastro_voce_salvar").click(function(){
@@ -116,7 +116,7 @@
 					if(estado==""){ alert("O campo Estado deve ser preenchido"); return false; }
 					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
 										
-					$.get("http://gabrieldesigndistrict.com.br/app_api/cadastro.php", { tipo:'usuario', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone_contato:telefone_contato, celular_contato:celular_contato, senha:senha, cep:cep, estado:estado, cidade:cidade }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'usuario', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone_contato:telefone_contato, celular_contato:celular_contato, senha:senha, cep:cep, estado:estado, cidade:cidade }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){

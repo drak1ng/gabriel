@@ -60,7 +60,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_evento = window.localStorage.getItem('id_evento');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/eventos-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_evento:id_evento }, function(data){ $('#eventos_interno_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/eventos-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_evento:id_evento }, function(data){ $('#eventos_interno_conteudo').html(data); });
 				
 			</script>
 		

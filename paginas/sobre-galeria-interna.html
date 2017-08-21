@@ -61,7 +61,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_galeria = window.localStorage.getItem('id_galeria');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api/minhas-galeria-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-galeria-interna-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minhas-galeria-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-galeria-interna-conteudo').html(data); });
 				
 			</script>
 		
