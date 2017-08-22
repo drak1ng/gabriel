@@ -141,13 +141,13 @@ body {
 .empresa-ficha-feeds-bloco							{ padding-bottom:30px; }
 .empresa-ficha-feeds-bloco-imagem					{ margin:0px -15px; }
 .empresa-ficha-feeds-bloco-imagem img				{ width:100% !important; height:auto !important; }
-.empresa-ficha-feeds-bloco-titulo					{ padding-top:10px; }
+.empresa-ficha-feeds-bloco-titulo					{ padding-bottom:10px; }
 .empresa-ficha-feeds-bloco-titulo-imagem			{ width:50px; height:50px; float:left; background:center center no-repeat #ebebeb; background-size:cover; border-radius:100px; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); }
-.empresa-ficha-feeds-bloco-titulo-texto				{ margin-left:60px; margin-right:40px; font-size:18px; font-weight:600; padding-top:4px; }
+.empresa-ficha-feeds-bloco-titulo-texto				{ margin-left:60px; margin-right:0px; font-size:18px; font-weight:600; padding-top:4px; }
 .empresa-ficha-feeds-bloco-titulo-texto span		{ display:block; font-size:13px; font-weight:300; }
-.empresa-ficha-feeds-bloco-texto					{ font-size:14px; line-height:20px; padding-top:10px; }
-.empresa-ficha-feeds-bloco-gostei					{ width:30px; height:40px; float:right; background:url(../img/015.png) center center no-repeat; background-size:30px; margin-right:10px; }
-.empresa-ficha-feeds-bloco-gostei-on				{ width:30px; height:40px; float:right; background:url(../img/015_on.png) center center no-repeat; background-size:30px; margin-right:10px; }
+.empresa-ficha-feeds-bloco-texto					{ font-size:14px; line-height:20px; padding-top:0px; }
+.empresa-ficha-feeds-bloco-gostei					{ width:30px; height:30px; float:right; background:url(../img/015.png) center center no-repeat; background-size:30px; margin-right:0px; margin-bottom:5px; }
+.empresa-ficha-feeds-bloco-gostei-on				{ width:30px; height:30px; float:right; background:url(../img/015_on.png) center center no-repeat; background-size:30px; margin-right:0px; margin-bottom:5px; }
 
 .empresa-ficha-contato								{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .empresa-ficha-contato-caixa						{ width:280px; height:400px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
