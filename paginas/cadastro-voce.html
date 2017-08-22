@@ -45,8 +45,8 @@
 			<div role="main" class="ui-content">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
-					<input type="text" id="cadastro_voce_nome" placeholder="Nome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_voce_sobrenome" placeholder="Sobrenome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_voce_nome" placeholder="Nome*" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_voce_sobrenome" placeholder="Sobrenome*" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_voce_nascimento" placeholder="Nascimento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<select id="cadastro_voce_sexo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 						<option value="">Sexo</option>
@@ -55,20 +55,16 @@
 						<option value="Feminino">Feminino</option>
 					</select>
 					<input type="tel" id="cadastro_voce_telefone" placeholder="Telefone" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="tel" id="cadastro_voce_celular" placeholder="Celular" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3 style="font-family:'roboto'; color:#000;">Dados de Login</h3>
-					<input type="email" id="cadastro_voce_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="password" id="cadastro_voce_senha" placeholder="Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="password" id="cadastro_voce_confirme_senha" placeholder="Confirme a Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="email" id="cadastro_voce_email" placeholder="E-mail*" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="password" id="cadastro_voce_senha" placeholder="Senha*" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="password" id="cadastro_voce_confirme_senha" placeholder="Confirme a Senha*" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3 style="font-family:'roboto'; color:#000;">Endereço</h3>					
 					<input type="tel" id="cadastro_voce_cep" placeholder="Cep" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<div style="border:1px solid #ccc; border-radius:6px; background:#FFF; color:#999; padding:10px; margin-top:5px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;">Consultar CEP</div>
 					<div style='clear:both;'></div>
-					<br>
-					<input type="text" id="cadastro_voce_estado" placeholder="Estado" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_voce_cidade" placeholder="Cidade" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					
 					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_cadastro_voce_salvar">Quero me Cadastrar</div>
 				</div>
@@ -81,8 +77,7 @@
 			<script>
 				
 				$('#cadastro_voce_nascimento').mask('99/99/9999');
-				$('#cadastro_voce_telefone').mask('(99) 9999-9999');
-				$('#cadastro_voce_celular').mask('(99) 99999-9999');
+				$('#cadastro_voce_telefone').mask('(99) 9999-9999?9');
 				$('#cadastro_voce_cep').mask('99999-999');
 				
 				$('#cadastro_voce_cep').blur(function(){
@@ -97,13 +92,9 @@
 					var sexo = $('#cadastro_voce_sexo').val();
 					var email = $('#cadastro_voce_email').val();
 					var telefone_contato = $('#cadastro_voce_telefone').val();
-					var celular_contato = $('#cadastro_voce_celular').val();
 					var senha = $('#cadastro_voce_senha').val();
 					var confirme_senha = $('#cadastro_voce_confirme_senha').val();
-					
 					var cep = $('#cadastro_voce_cep').val();
-					var estado = $('#cadastro_voce_estado').val();
-					var cidade = $('#cadastro_voce_cidade').val();
 					
 					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
 					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
@@ -113,10 +104,8 @@
 					if(confirme_senha!=senha){ alert("As senha informadas não são iguais"); return false; }
 					
 					if(cep==""){ alert("O campo CEP deve ser preenchido"); return false; }
-					if(estado==""){ alert("O campo Estado deve ser preenchido"); return false; }
-					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
 										
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'usuario', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone_contato:telefone_contato, celular_contato:celular_contato, senha:senha, cep:cep, estado:estado, cidade:cidade }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'usuario', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, telefone_contato:telefone_contato, senha:senha, cep:cep }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
