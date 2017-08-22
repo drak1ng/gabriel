@@ -101,7 +101,6 @@
 					var nome = $('#cadastro_empresa_nome').val();
 					var sobrenome = $('#cadastro_empresa_sobrenome').val();
 					var nascimento = $('#cadastro_empresa_nascimento').val();
-					var sexo = $('#cadastro_empresa_sexo').val();
 					var email = $('#cadastro_empresa_email').val();
 					var senha = $('#cadastro_empresa_senha').val();
 					var confirme_senha = $('#cadastro_empresa_confirme_senha').val();
@@ -148,7 +147,7 @@
 					
 
 					
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'empresa', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:categoria }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'empresa', nome:nome, sobrenome:sobrenome, nascimento:nascimento, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:categoria }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
