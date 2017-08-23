@@ -109,7 +109,10 @@
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
-							$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
+							window.localStorage.setItem('cadastro_email',email);
+							window.localStorage.setItem('cadastro_senha',senha);
+							$.mobile.changePage("cadastro-foto.html", { transition: "fade", changeHash: false });
+							//$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
 						}else{
 							alert("Não foi possuível concluir o seu cadastro, tente novamente mais tarde!");
 						}
