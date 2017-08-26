@@ -47,8 +47,8 @@
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
 					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Razão Social" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_nome" placeholder="Nome Fantasia" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_empresa_nascimento" placeholder="CNPJ" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<textarea id="cadastro_empresa_descricao" placeholder="Descrição" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; height:200px;"></textarea>
+					<input type="tel" id="cadastro_empresa_nascimento" placeholder="CNPJ" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<textarea id="cadastro_empresa_descricao" placeholder="Descrição" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;" rows="20"></textarea>
 					<br>
 					<h3>Dados de Login</h3>
 					<input type="email" id="cadastro_empresa_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
@@ -67,7 +67,7 @@
 					<div style='clear:both;'></div>
 					<br>
 					<input type="text" id="cadastro_empresa_endereco" placeholder="Endereço" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_empresa_numero" placeholder="Número" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="tel" id="cadastro_empresa_numero" placeholder="Número" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_complemento" placeholder="Complemento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_estado" placeholder="Estado" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_cidade" placeholder="Cidade" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
@@ -89,6 +89,7 @@
 				$('#cadastro_empresa_contato_telefone').mask('(99) 9999-9999');
 				$('#cadastro_empresa_contato_celular').mask('(99) 99999-9999');
 				$('#cadastro_empresa_cep').mask('99999-999');
+				$('#cadastro_empresa_nascimento').mask('99.999.999/9999-99');
 				
 				$('#cadastro_empresa_cep').blur(function(){
 					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'endereco', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_endereco').val(data); });
@@ -152,7 +153,7 @@
 					
 
 					
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'empresa', nome:nome, sobrenome:sobrenome, nascimento:nascimento, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:categoria, descricao:descricao }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'empresa', nome:nome, sobrenome:sobrenome, cpf:nascimento, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:categoria, descricao:descricao }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="ERRO_CEP"){
