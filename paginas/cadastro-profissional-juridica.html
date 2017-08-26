@@ -75,7 +75,7 @@
 				
 				$('#cadastro_profissional_contato_telefone').mask('(99) 9999-9999?9');
 				$('#cadastro_profissional_cep').mask('99999-999');
-				$('#cadastro_profissional_cpf').mask('999.999.99-99');
+				$('#cadastro_profissional_cpf').mask('99.999.999/9999-99');
 				
 				$("#bt_profissional_cadastro_salvar").click(function(){
 					var cpf = $('#cadastro_profissional_cpf').val();
@@ -100,7 +100,7 @@
 					
 
 					
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'profissional', nome:nome, email:email, senha:senha, telefone_contato:telefone_contato, cep:cep, profissao:profissao, cpf:cpf, categoria:'1' }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'profissional-juridica', nome:nome, email:email, senha:senha, telefone_contato:telefone_contato, cep:cep, profissao:profissao, cpf:cpf, categoria:'1' }, function(data){
 							
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");

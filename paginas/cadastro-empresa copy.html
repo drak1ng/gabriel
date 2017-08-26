@@ -45,8 +45,8 @@
 			<div role="main" class="ui-content">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
-					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Razão Social" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_empresa_nome" placeholder="Nome Fantasia" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_nome" placeholder="Razão Social" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Nome Fantasia" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_nascimento" placeholder="CNPJ" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<br>
 					<h3>Dados de Login</h3>
@@ -151,10 +151,7 @@
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
 						}else if(data=="OK"){
-							window.localStorage.setItem('cadastro_email',email);
-							window.localStorage.setItem('cadastro_senha',senha);
-							$.mobile.changePage("cadastro-foto.html", { transition: "fade", changeHash: false });
-							//$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
+							$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
 						}else{
 							alert("Não foi possuível concluir o seu cadastro, tente novamente mais tarde!");
 						}

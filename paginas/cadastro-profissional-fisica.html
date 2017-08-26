@@ -112,7 +112,7 @@
 					
 
 					
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'profissional', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, telefone_contato:telefone_contato, cep:cep, profissao:profissao, cpf:cpf, categoria:'1' }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'profissional-fisica', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, telefone_contato:telefone_contato, cep:cep, profissao:profissao, cpf:cpf, categoria:'1' }, function(data){
 							
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
