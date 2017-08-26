@@ -48,6 +48,7 @@
 					<input type="text" id="cadastro_empresa_sobrenome" placeholder="Razão Social" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_nome" placeholder="Nome Fantasia" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_empresa_nascimento" placeholder="CNPJ" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<textarea id="cadastro_empresa_descricao" placeholder="Descrição" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; height:200px;"></textarea>
 					<br>
 					<h3>Dados de Login</h3>
 					<input type="email" id="cadastro_empresa_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
@@ -118,6 +119,10 @@
 					var cidade = $('#cadastro_empresa_cidade').val();
 					var bairro = $('#cadastro_empresa_bairro').val();
 					
+					var descricao = $('#cadastro_empresa_descricao').val();
+					
+					
+					
 					if(nome==""){ alert("O campo Razão Social deve ser preenchido"); return false; }
 					if(sobrenome==""){ alert("O campo Nome Fantasia deve ser preenchido"); return false; }
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
@@ -147,9 +152,11 @@
 					
 
 					
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'empresa', nome:nome, sobrenome:sobrenome, nascimento:nascimento, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:categoria }, function(data){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'empresa', nome:nome, sobrenome:sobrenome, nascimento:nascimento, email:email, senha:senha, confirme_senha:confirme_senha, nome_contato:nome_contato, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:categoria, descricao:descricao }, function(data){
 						if(data=="ERRO_EMAIL"){
 							alert("Esse E-mail já foi utilizado em outro Cadastro");
+						}else if(data=="ERRO_CEP"){
+							alert("Endereço não é válido para o cadastro.");
 						}else if(data=="OK"){
 							window.localStorage.setItem('cadastro_email',email);
 							window.localStorage.setItem('cadastro_senha',senha);
