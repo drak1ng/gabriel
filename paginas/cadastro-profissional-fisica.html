@@ -45,10 +45,10 @@
 			<div role="main" class="ui-content">
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
-					<input type="text" id="cadastro_profissional_cpf" placeholder="CPF" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="tel" id="cadastro_profissional_cpf" placeholder="CPF" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_profissional_nome" placeholder="Nome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<input type="text" id="cadastro_profissional_sobrenome" placeholder="Sobrenome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-					<input type="text" id="cadastro_profissional_nascimento" placeholder="Nascimento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="tel" id="cadastro_profissional_nascimento" placeholder="Nascimento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<select id="cadastro_profissional_sexo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 						<option value="">Sexo</option>
 						<option value=""></option>
@@ -84,6 +84,7 @@
 				$('#cadastro_profissional_nascimento').mask('99/99/9999');
 				$('#cadastro_profissional_contato_telefone').mask('(99) 9999-9999?9');
 				$('#cadastro_profissional_cep').mask('99999-999');
+				$('#cadastro_profissional_cpf').mask('999.999.99-99');
 				
 				$("#bt_profissional_cadastro_salvar").click(function(){
 					var cpf = $('#cadastro_profissional_cpf').val();
