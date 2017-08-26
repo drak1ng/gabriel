@@ -92,6 +92,7 @@
 				$('#cadastro_empresa_nascimento').mask('99.999.999/9999-99');
 				
 				$('#cadastro_empresa_cep').blur(function(){
+					alert('teste');
 					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'endereco', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_endereco').val(data); });
 					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'bairro', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_bairro').val(data); });
 					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'cidade', cep:$('#cadastro_empresa_cep').val() }, function(data){ $('#cadastro_empresa_cidade').val(data); });
