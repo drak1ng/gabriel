@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <title>GABRIEL</title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../js/cordova.js"></script>
+	</head>
+    <body>
+	    <div data-role="page" style="background:#FFF;">
+		    <div class="topo">
+			    <div class="logotipo">
+				    <div style="min-width:10px; float:left; color:#214629; margin-left:5px;" id="bt_cadastro_profissional_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#214629;"><b>CADASTRE-SE<b></div>
+				</div>
+		    </div>
+
+			<div role="main" class="ui-content">
+				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
+					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
+					<input type="text" id="cadastro_profissional_nome" placeholder="Nome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_sobrenome" placeholder="Sobrenome" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_nascimento" placeholder="Nascimento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<select id="cadastro_profissional_sexo" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+						<option value="">Sexo</option>
+						<option value=""></option>
+						<option value="Masculino">Masculino</option>
+						<option value="Feminino">Feminino</option>
+					</select>
+					<br>
+					<h3>Dados de Login</h3>
+					<input type="email" id="cadastro_profissional_email" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="password" id="cadastro_profissional_senha" placeholder="Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="password" id="cadastro_profissional_confirme_senha" placeholder="Confirme a Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<br>
+					<h3>Dados para Contato</h3>
+					<input type="email" id="cadastro_profissional_contato_email" placeholder="E-mail para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="tel" id="cadastro_profissional_contato_telefone" placeholder="Telefone para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="tel" id="cadastro_profissional_contato_celular" placeholder="Celular para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<br>
+					<h3>Endereço</h3>					
+					<input type="tel" id="cadastro_profissional_cep" placeholder="Cep" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<div style="border:1px solid #ccc; border-radius:6px; background:#FFF; color:#999; padding:10px; margin-top:5px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;">Consultar CEP</div>
+					<div style='clear:both;'></div>
+					<br>
+					<input type="text" id="cadastro_profissional_endereco" placeholder="Endereço" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_numero" placeholder="Número" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_complemento" placeholder="Complemento" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_estado" placeholder="Estado" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_cidade" placeholder="Cidade" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					<input type="text" id="cadastro_profissional_bairro" placeholder="Bairro" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
+					
+					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_profissional_cadastro_salvar">Quero me Cadastrar</div>
+				</div>
+			</div>
+		
+			<style>
+				.ui-select .ui-btn { font-family:'roboto'; border:1px solid #CCC; border-radius:6px; background:#FFF; text-align:left; font-size:14px; color:#999; padding-left:10px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
+			</style>
+			
+			<script>
+				
+				$('#cadastro_profissional_nascimento').mask('99/99/9999');
+				$('#cadastro_profissional_contato_telefone').mask('(99) 9999-9999');
+				$('#cadastro_profissional_contato_celular').mask('(99) 99999-9999');
+				$('#cadastro_profissional_cep').mask('99999-999');
+				
+				$('#cadastro_profissional_cep').blur(function(){
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'endereco', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_endereco').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'bairro', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_bairro').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'cidade', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_cidade').val(data); });
+					$.get("http://cema.projetotemporario.com.br/app_api_v2.0.1/cep.php", { tipo:'estado', cep:$('#cadastro_profissional_cep').val() }, function(data){ $('#cadastro_profissional_estado').val(data); });
+				});
+				
+				$("#bt_profissional_cadastro_salvar").click(function(){
+					var nome = $('#cadastro_profissional_nome').val();
+					var sobrenome = $('#cadastro_profissional_sobrenome').val();
+					var nascimento = $('#cadastro_profissional_nascimento').val();
+					var sexo = $('#cadastro_profissional_sexo').val();
+					var email = $('#cadastro_profissional_email').val();
+					var senha = $('#cadastro_profissional_senha').val();
+					var confirme_senha = $('#cadastro_profissional_confirme_senha').val();
+					
+					var email_contato = $('#cadastro_profissional_contato_email').val();
+					var telefone_contato = $('#cadastro_profissional_contato_telefone').val();
+					var celular_contato = $('#cadastro_profissional_contato_celular').val();
+					
+					var cep = $('#cadastro_profissional_cep').val();
+					var endereco = $('#cadastro_profissional_endereco').val();
+					var numero = $('#cadastro_profissional_numero').val();
+					var complemento = $('#cadastro_profissional_complemento').val();
+					var estado = $('#cadastro_profissional_estado').val();
+					var cidade = $('#cadastro_profissional_cidade').val();
+					var bairro = $('#cadastro_profissional_bairro').val();
+					
+					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
+					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
+					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
+					if(senha==""){ alert("O campo Senha deve ser preenchido"); return false; }
+					if(confirme_senha==""){ alert("O campo Confirme a Senha deve ser preenchido"); return false; }
+					if(confirme_senha!=senha){ alert("As senha informadas não são iguais"); return false; }
+					
+					if(cep==""){ alert("O campo CEP deve ser preenchido"); return false; }
+					if(endereco==""){ alert("O campo Endereço deve ser preenchido"); return false; }
+					if(numero==""){ alert("O campo Número deve ser preenchido"); return false; }
+					if(estado==""){ alert("O campo Estado deve ser preenchido"); return false; }
+					if(cidade==""){ alert("O campo Cidade deve ser preenchido"); return false; }
+					if(bairro==""){ alert("O campo Bairro deve ser preenchido"); return false; }
+					
+					
+
+					
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/cadastro.php", { tipo:'profissional', nome:nome, sobrenome:sobrenome, nascimento:nascimento, sexo:sexo, email:email, senha:senha, email_contato:email_contato, telefone_contato:telefone_contato, celular_contato:celular_contato, cep:cep, endereco:endereco, numero:numero, complemento:complemento, estado:estado, cidade:cidade, bairro:bairro, categoria:'1' }, function(data){
+						if(data=="ERRO_EMAIL"){
+							alert("Esse E-mail já foi utilizado em outro Cadastro");
+						}else if(data=="OK"){
+							$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
+						}else{
+							alert("Não foi possuível concluir o seu cadastro, tente novamente mais tarde!");
+						}
+					});
+					
+				});
+				
+				$("#bt_cadastro_profissional_voltar").click(function(){
+					$.mobile.changePage("cadastro_tipo.html", { transition: "fade", changeHash: false });
+				});
+				
+			</script>
+		
+		</div>
+    </body>
+</html>
