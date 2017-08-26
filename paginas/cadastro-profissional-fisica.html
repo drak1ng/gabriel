@@ -57,7 +57,7 @@
 					</select>
 					<input type="tel" id="cadastro_profissional_contato_telefone" placeholder="Telefone para contato" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
 					<select id="cadastro_profissional_profissao" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px;">
-						<option value="">Profissão</option>
+						<option value="">Área de Atuação</option>
 						<option value=""></option>
 					</select>
 					<br>
@@ -99,14 +99,14 @@
 					var telefone_contato = $('#cadastro_profissional_contato_telefone').val();
 					var cep = $('#cadastro_profissional_cep').val();
 					
-					if(cpf==""){ alert("O campo Nome deve ser preenchido"); return false; }
+					if(cpf==""){ alert("O campo CPF deve ser preenchido"); return false; }
 					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
 					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
 					if(senha==""){ alert("O campo Senha deve ser preenchido"); return false; }
 					if(confirme_senha==""){ alert("O campo Confirme a Senha deve ser preenchido"); return false; }
 					if(confirme_senha!=senha){ alert("As senha informadas não são iguais"); return false; }
-					if(profissao==""){ alert("O campo Profissão deve ser preenchido"); return false; }
+					if(profissao==""){ alert("O campo Área de Atuação deve ser preenchido"); return false; }
 					if(cep==""){ alert("O campo CEP deve ser preenchido"); return false; }
 					
 					
