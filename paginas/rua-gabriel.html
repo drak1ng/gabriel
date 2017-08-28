@@ -61,7 +61,7 @@
 				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
-				$('.topo2-rua').click(function(){ $.mobile.changePage("rua-gabriel.html", { transition: "fade", changeHash: false }); });
+				$('.topo2-categorias').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
 				
 				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/rua-gabriel.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#rua_gabriel_conteudo').html(data); });
 				
