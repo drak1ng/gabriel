@@ -40,6 +40,7 @@
 					<img src="../img/logo_gdd.png" class='topo2-logo'>
 					<div class="topo2-menu"></div>
 					<div class="topo2-categorias"></div>
+					<div class="topo2-rua"></div>
 				</div>
 				
 				<div class="conteudo" id="home_conteudo">
@@ -100,6 +101,7 @@
 				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo2-categorias').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
+				$('.topo2-rua').click(function(){ $.mobile.changePage("rua-gabriel.html", { transition: "fade", changeHash: false }); });
 				
 				$('#bt-home-sair').click(function(){
 					window.localStorage.setItem('id_usuarios','');

@@ -70,7 +70,8 @@ body {
 .topo2				{ width:100%; height:80px; position:fixed; top:0px; left:0px; background:#FFF; }
 .topo2-logo			{ width:60px; margin-top:10px; margin-left:10px; float:left; }
 .topo2-menu			{ width:60px; height:60px; margin-top:10px; float:right; background:url(../img/010.png) center center no-repeat; background-size:40px; margin-right:10px; }
-.topo2-categorias	{ width:60px; height:60px; margin-top:10px; float:right; background:url(../img/011.png) center center no-repeat; background-size:40px; }
+.topo2-categorias	{ width:60px; height:60px; margin-top:10px; float:right; background:url(../img/020.png) center center no-repeat; background-size:30px; }
+.topo2-rua			{ width:60px; height:60px; margin-top:10px; float:right; background:url(../img/011.png) center center no-repeat; background-size:40px; }
 .conteudo			{ margin-top:35px; padding:20px 10px; text-transform:none; font-family:'roboto'; text-align:left; font-size:15px; font-weight:300; line-height:24px; }
 
 .page				{ background:#FFF !important; }
