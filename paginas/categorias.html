@@ -54,16 +54,22 @@
 				
 			</div>
 			
+			<style>
+				.campo_busca		{ border:0px solid #FFF !important; width:100%; outline:none;  }
+				.campo_busca_botao	{ border:0px; margin:0px; padding:0px; width:30px; height:30px; background:url(../img/020.png) center center no-repeat; background-size:24px; display:none; }
+			</style>
+			
 			<script>
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var busca = window.localStorage.getItem('busca');
 				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('.topo2-rua').click(function(){ $.mobile.changePage("rua-gabriel.html", { transition: "fade", changeHash: false }); });
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/categorias.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#categorias_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/categorias.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, busca:busca }, function(data){ $('#categorias_conteudo').html(data); });
 				
 			</script>
 		
