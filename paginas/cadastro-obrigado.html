@@ -45,7 +45,7 @@
 				<div id="id_conteudo_cadastro_sucesso" style="text-align:center; padding:50px 0px 50px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify;">
 					<br><br>
 					<h1><b>SUCESSO!<b></h1>
-					<p style="font-size:13px; text-align:center; font-weight:normal;">Cadastro realizado com sucesso!<br><br>Você já pode continuar e<br>acessar o app.</p>
+					<p id='cadastro_obrigado_mensagem' style="font-size:13px; text-align:center; font-weight:normal;">Cadastro realizado com sucesso!<br><br>Você já pode continuar e<br>acessar o app.</p>
 					<br><br>
 					<div style="border:1px solid #214629; border-radius:6px; background:#FFF; color:#214629; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-align:center;" id="bt_cadastro_acessar">Clique aqui para acessar sua conta</div>
 				</div>
@@ -57,6 +57,13 @@
 				$("#bt_cadastro_acessar").click(function(){
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
+				
+				var cadastro_tipo = window.localStorage.getItem('cadastro_tipo');
+				
+				if(cadastro_tipo=='empresa'){
+					$('#cadastro_obrigado_mensagem').html('Solicitação realizado com sucesso!<br><br>Em breve entraremos em contato.');
+					$('#bt_cadastro_acessar').html('Clique aqui para continuar');
+				}
 				
 			</script>
 		

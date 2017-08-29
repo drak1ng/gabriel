@@ -76,7 +76,7 @@
 					<h3>Categorias</h3>
 					<div class="cadastro-categorias"></div>
 					
-					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_empresa_cadastro_salvar">Quero me Cadastrar</div>
+					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_empresa_cadastro_salvar">Enviar Solicitação</div>
 				</div>
 			</div>
 		
@@ -162,6 +162,7 @@
 						}else if(data=="OK"){
 							window.localStorage.setItem('cadastro_email',email);
 							window.localStorage.setItem('cadastro_senha',senha);
+							window.localStorage.setItem('cadastro_tipo','empresa');
 							$.mobile.changePage("cadastro-foto.html", { transition: "fade", changeHash: false });
 							//$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
 						}else{

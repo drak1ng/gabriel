@@ -110,6 +110,7 @@
 						}else if(data=="OK"){
 							window.localStorage.setItem('cadastro_email',email);
 							window.localStorage.setItem('cadastro_senha',senha);
+							window.localStorage.setItem('cadastro_tipo','usuario');
 							$.mobile.changePage("cadastro-foto.html", { transition: "fade", changeHash: false });
 							//$.mobile.changePage("cadastro-obrigado.html", { transition: "fade", changeHash: false });
 						}else{
