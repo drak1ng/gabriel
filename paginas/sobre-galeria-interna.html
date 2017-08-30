@@ -38,9 +38,15 @@
 		    <div class="topo">
 			    <div class="logotipo">
 				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_galeria_interna_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:right; color:#000;" id="bt_sobre_galeria_interna_adicionar"><i class="fa fa-plus" aria-hidden="true"></i></div>
 				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Galeria de Fotos<b></div>
 				</div>
 		    </div>
+
+			<form action='http://gabrieldesigndistrict.com.br/app_api_v2.0.1/upload-galeria.php' method='POST' id='foto_form3' enctype='multipart/form-data' target='iframe_foto'>
+				<input type='hidden' name='id_usuarios' value=''>
+				<input type='file' id='upload_file_id3' name='upload_file' style='display:none;' accept="image/*">
+			</form>
 
 			<div role="main" class="ui-content">
 				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="sobre-galeria-interna-conteudo">
@@ -61,7 +67,26 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_galeria = window.localStorage.getItem('id_galeria');
 				
+				$('input[name=id_usuarios]').val(id_usuarios);
+				
 				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minhas-galeria-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-galeria-interna-conteudo').html(data); });
+				
+				$('#bt_sobre_galeria_interna_adicionar').click(function(){
+					$('#upload_file_id3').trigger('click');
+				});
+				
+				
+				$('#upload_file_id3').on('change', function(){
+					$('#foto_form3').submit();
+				});
+				
+				$('#iframe_foto').on('load', function(){
+			        setTimeout("recarregarGaleriaInterna()",100);
+			    });
+			    
+			    function recarregarGaleriaInterna(){
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minhas-galeria-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-galeria-interna-conteudo').html(data); });
+			    }
 				
 			</script>
 		
