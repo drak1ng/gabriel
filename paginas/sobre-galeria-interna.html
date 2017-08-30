@@ -56,6 +56,10 @@
 						Aguarde carregando...
 					</div>
 				</div>
+				
+				<div style="background-color:rgba(255,255,255,0.8); width:100%; height:100%; position:fixed; top:0px; left:0px; display:none;" id="aguarde-carregando3">
+					<div style="padding-top:190px; color:#000; text-align:center;"><b>Aguarde!<br>Enviando sua imagem</b></div>
+				</div>
 		
 			
 			<script>
@@ -79,6 +83,7 @@
 				
 				
 				$('#upload_file_id3').on('change', function(){
+					$("#aguarde-carregando3").show();
 					$('#foto_form3').submit();
 				});
 				
@@ -87,6 +92,7 @@
 			    });
 			    
 			    function recarregarGaleriaInterna(){
+					$("#aguarde-carregando3").hide();
 					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minhas-galeria-interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-galeria-interna-conteudo').html(data); });
 			    }
 				
