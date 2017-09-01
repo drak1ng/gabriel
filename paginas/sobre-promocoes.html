@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <title>GABRIEL</title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../js/cordova.js"></script>
+	</head>
+    <body>
+	    <div data-role="page" style="background:#FFF;">
+		    <div class="topo">
+			    <div class="logotipo">
+				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_promocoes_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:right; color:#000;" id="bt_sobre_promocoes_adicionar"><i class="fa fa-plus" aria-hidden="true"></i></div>
+				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Promoções<b></div>
+				</div>
+		    </div>
+
+			<form action='http://gabrieldesigndistrict.com.br/app_api_v2.0.1/upload-promocoes.php' method='POST' id='foto_form5' enctype='multipart/form-data' target='iframe_foto'>
+				<input type='hidden' name='id_usuarios' value=''>
+				<input type='file' id='upload_file_id5' name='upload_file' style='display:none;'>
+			</form>
+
+			<div role="main" class="ui-content">
+				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="sobre-promocoes-conteudo">
+					<div style="padding-top:120px; text-align:center; font-size:13px;">
+						<img src="../img/loading.gif" width="110" height="10" /><br><br>
+						Aguarde carregando...
+					</div>
+				</div>
+				
+				<div style="background-color:rgba(255,255,255,0.8); width:100%; height:100%; position:fixed; top:0px; left:0px; display:none;" id="aguarde-carregando5">
+					<div style="padding-top:190px; color:#000; text-align:center;"><b>Aguarde!<br>Enviando sua imagem</b></div>
+				</div>
+		
+			
+			<script>
+				
+				$("#bt_sobre_promocoes_voltar").click(function(){
+					$.mobile.changePage("sobre.html", { transition: "fade", changeHash: false });
+				});
+				
+				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				
+				$('input[name=id_usuarios]').val(id_usuarios);
+				
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minhas-promocoes.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-promocoes-conteudo').html(data); });
+				
+				$('#bt_sobre_promocoes_adicionar').click(function(){
+					$('#upload_file_id5').trigger('click');
+				});
+				
+				
+				$('#upload_file_id5').on('change', function(){
+					$("#aguarde-carregando5").show();
+					$('#foto_form5').submit();
+				});
+				
+				$('#iframe_foto').on('load', function(){
+			        setTimeout("recarregarPromocoes()",100);
+			    });
+			    
+			    function recarregarPromocoes(){
+					$("#aguarde-carregando5").hide();
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/minhas-promocoes.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#sobre-promocoes-conteudo').html(data); });
+			    }
+				
+			</script>
+		
+		</div>
+    </body>
+</html>
