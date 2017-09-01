@@ -175,6 +175,9 @@ body {
 .sobre-bloco-titulo									{ margin:10px 50px 10px 90px; text-align:left; font-size:15px; color:#000; }
 .sobre-bloco-remover								{ width:40px; height:80px; float:right; background:url(../img/018.png) center center no-repeat; background-size:30px; }
 
+.catalogo-bloco-titulo								{ margin:10px 50px 10px 0px; text-align:left; font-size:15px; color:#000; }
+.catalogo-bloco-remover								{ width:40px; height:80px; float:right; background:url(../img/018.png) center center no-repeat; background-size:30px; }
+
 .btfoto												{ background:url(../img/019.png) center center no-repeat #000; background-size:30px; border-radius:100px; width:60px; height:60px; position:fixed; bottom:10px; right:10px; -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2); box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2); }
 
 /* Landscape layout (with min-width) */
