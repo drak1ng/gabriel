@@ -37,14 +37,14 @@
 	    <div data-role="page" style="background:#FFF;">
 		    <div class="topo">
 			    <div class="logotipo">
-				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_favoritos_interna_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-				    <div style="min-width:10px; float:right; color:#000;" id="bt_sobre_favoritos_interna_adicionar"><i class="fa fa-users" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:left; color:#000;" id="bt_sobre_favoritos_interna_usuarios_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:right; color:#000;" id="bt_sobre_favoritos_interna_usuarios_adicionar"><i class="fa fa-plus" aria-hidden="true"></i></div>
 				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>Favoritos<b></div>
 				</div>
 		    </div>
 
 			<div role="main" class="ui-content">
-				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="sobre-favoritos-interna-conteudo">
+				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="sobre-favoritos-interna-usuarios-conteudo">
 					<div style="padding-top:120px; text-align:center; font-size:13px;">
 						<img src="../img/loading.gif" width="110" height="10" /><br><br>
 						Aguarde carregando...
@@ -54,19 +54,19 @@
 			
 			<script>
 				
-				$("#bt_sobre_favoritos_interna_voltar").click(function(){
-					$.mobile.changePage("sobre-favoritos.html", { transition: "fade", changeHash: false });
+				$("#bt_sobre_favoritos_interna_usuarios_voltar").click(function(){
+					$.mobile.changePage("sobre-favoritos-interna.html", { transition: "fade", changeHash: false });
 				});
 				
-				$("#bt_sobre_favoritos_interna_adicionar").click(function(){
-					$.mobile.changePage("sobre-favoritos-usuarios.html", { transition: "fade", changeHash: false });
+				$("#bt_sobre_favoritos_interna_usuarios_adicionar").click(function(){
+
 				});
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_galeria = window.localStorage.getItem('id_galeria_favoritos');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/favoritos_interna.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-favoritos-interna-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/favoritos_interna_usuarios.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_galeria:id_galeria }, function(data){ $('#sobre-favoritos-interna-usuarios-conteudo').html(data); });
 				
 			</script>
 		
