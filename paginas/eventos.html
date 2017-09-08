@@ -48,9 +48,9 @@
 					<div id="fechar-evento-cadastro" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
 					<h1 style='margin:13px 0px 20px 0px; text-align:left;'>Novo Evento</h1>
 					<input type="text" id="evento_nome" placeholder="Nome" style="width:calc(100% - 0px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
-					<input type="text" id="evento_data" placeholder="Data" style="width:calc(100% - 0px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
+					<input type="tel" id="evento_data" placeholder="Data" style="width:calc(100% - 0px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
 					<textarea id="evento_descricao" placeholder="Descrição" style="width:calc(100% - 0px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; height:200px; margin-top:10px; outline:none;"></textarea>
-					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_mensagem_enviar">Enviar Mensagem</div>
+					<div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto'; text-align:center;" id="bt_evento_enviar">Enviar Mensagem</div>
 				</div>
 			</div>
 
@@ -74,6 +74,31 @@
 				
 				$("#bt_eventos_adicionar").click(function(){
 					$('.eventos-ficha-cadastro').show();
+				});
+				
+				$("#evento_data").mask("99/99/9999");
+				
+				$("#bt_evento_enviar").click(function(){
+				 	var nome = $('#evento_nome').val();
+					var data = $('#evento_data').val();
+					var descricao = $('#evento_descricao').val();
+					
+					if(nome==""){ alert("O campo Nome deve ser preenchido!"); return false; }
+					if(data==""){ alert("O campo Data deve ser preenchido!"); return false; }
+					if(descricao==""){ alert("O campo Descrição deve ser preenchido!"); return false; }
+					
+					var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
+					var id_usuarios = window.localStorage.getItem('id_usuarios');
+					
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/enviar_eventos.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, nome:nome, data:data, descricao:descricao }, function(data){ 
+						alert("Evento cadastrado com sucesso!");
+						$('.eventos-ficha-cadastro').hide();
+					 	$('#evento_nome').val('');
+						$('#evento_data').val('');
+						$('#evento_descricao').val('');
+					});
+					
+										
 				});
 				
 
