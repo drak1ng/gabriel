@@ -38,6 +38,7 @@
 		    <div class="topo">
 			    <div class="logotipo">
 				    <div style="min-width:10px; float:left; color:#000;" id="bt_eventos_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				    <div style="min-width:10px; float:right; color:#000;" id="bt_eventos_adicionar"><i class="fa fa-plus" aria-hidden="true"></i></div>
 				    <div style="margin:0px 80px; text-align:center; color:#000; font-family:'roboto';"><b>EVENTOS<b></div>
 				</div>
 		    </div>
@@ -54,6 +55,10 @@
 				
 				$("#bt_eventos_voltar").click(function(){
 					$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
+				});
+				
+				$("#bt_eventos_adicionar").click(function(){
+					alert('teste');
 				});
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
