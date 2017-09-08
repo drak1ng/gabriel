@@ -45,7 +45,7 @@
 		    
 			<div class="eventos-ficha-cadastro">
 				<div class="eventos-ficha-cadastro-caixa">
-					<div id="fechar-contato" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
+					<div id="fechar-evento-cadastro" style='width:50px; height:50px; float:right; background:url(../img/017.png) center center no-repeat; background-size:30px;'></div>
 					<h1 style='margin:13px 0px 20px 0px; text-align:left;'>Novo Evento</h1>
 					<input type="text" id="evento_nome" placeholder="Nome" style="width:calc(100% - 22px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
 					<input type="text" id="evento_data" placeholder="Data" style="width:calc(100% - 22px); border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto'; padding:10px; outline:none;">
@@ -61,6 +61,10 @@
 				</div>
 			</div>
 		
+			<style>
+				#evento_descricao { font-family:'roboto'; border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; text-align:left; font-size:14px; color:#999; height:140px !important; padding-left:2px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
+				.ui-select .ui-btn { font-family:'roboto'; border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; text-align:left; font-size:14px; color:#999; padding-left:2px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
+			</style>
 			
 			<script>
 				
@@ -69,7 +73,15 @@
 				});
 				
 				$("#bt_eventos_adicionar").click(function(){
-					alert('teste');
+					$('.eventos-ficha-cadastro').show();
+				});
+				
+
+				$('#fechar-evento-cadastro').click(function(){
+					$('.eventos-ficha-cadastro').hide();
+				 	$('#evento_nome').val('');
+					$('#evento_data').val('');
+					$('#evento_descricao').val('');
 				});
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
