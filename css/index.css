@@ -132,6 +132,7 @@ body {
 .empresa-ficha-info-favorito-on						{ width:30px; height:54px; float:left; background:url(../img/015_on.png) center center no-repeat; background-size:30px; margin-right:10px; }
 .empresa-ficha-info-mensagem						{ width:30px; height:54px; float:left; background:url(../img/016.png) center center no-repeat; background-size:30px; margin-right:10px; }
 .empresa-ficha-info-orcamento						{ width:100px; float:left; border:1px solid #CCC;  text-align:center; padding:3px 0px; color:#777; font-size:14px; border-radius:6px; margin-top:10px; margin-left:10px; }
+.empresa-ficha-info-horario-atendimento				{ font-weight:600; padding-top:20px; }
 
 .empresa-ficha-texto								{ padding:10px 0px; }
 
