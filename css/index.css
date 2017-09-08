@@ -166,6 +166,9 @@ body {
 
 .empresa-ficha-promocoes							{ padding-top:15px; display:none; }
 
+.favoritos-ficha-cadastro							{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
+.favoritos-ficha-cadastro-caixa						{ width:280px; height:170px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
+
 .eventos-ficha-cadastro								{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .eventos-ficha-cadastro-caixa						{ width:280px; height:366px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
@@ -179,7 +182,7 @@ body {
 .home-foto-postagem-caixa							{ width:280px; height:184px; position:fixed; top:50%; left:50%; margin:-135px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
 .sobre-galeria-novo									{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
-.sobre-galeria-novo-caixa								{ width:280px; height:170px; position:fixed; top:50%; left:50%; margin:-85px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
+.sobre-galeria-novo-caixa							{ width:280px; height:170px; position:fixed; top:50%; left:50%; margin:-85px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
 .sobre-feeds-bloco									{ padding:5px 0px; }
 .sobre-feeds-bloco-imagem							{ width:80px; height:80px; float:left; background:center center no-repeat #ebebeb; background-size:cover; -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2); border:4px; }

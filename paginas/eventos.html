@@ -96,6 +96,7 @@
 					 	$('#evento_nome').val('');
 						$('#evento_data').val('');
 						$('#evento_descricao').val('');
+						$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/eventos.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#eventos_conteudo').html(data); });
 					});
 					
 										
