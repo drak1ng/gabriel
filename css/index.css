@@ -158,6 +158,8 @@ body {
 .empresa-ficha-feeds-bloco-texto					{ font-size:14px; line-height:20px; padding-top:0px; }
 .empresa-ficha-feeds-bloco-gostei					{ width:30px; height:30px; float:right; background:url(../img/015.png) center center no-repeat; background-size:30px; margin-right:0px; margin-bottom:5px; }
 .empresa-ficha-feeds-bloco-gostei-on				{ width:30px; height:30px; float:right; background:url(../img/015_on.png) center center no-repeat; background-size:30px; margin-right:0px; margin-bottom:5px; }
+.empresa-ficha-feeds-bloco-favoritos				{ width:30px; height:30px; float:right; background:url(../img/024.png) center center no-repeat; background-size:26px; margin-right:0px; margin-bottom:5px; }
+.empresa-ficha-feeds-bloco-orcamento				{ width:30px; height:30px; float:right; background:url(../img/025.png) center center no-repeat; background-size:26px; margin-right:0px; margin-bottom:5px; }
 
 .empresa-ficha-catalogos							{ padding-top:15px; display:none; }
 .empresa-ficha-catalogos-bloco						{ margin:5px 0px; padding:15px; height:20px; color:#000; border:1px solid #000; }
