@@ -118,14 +118,15 @@
 				
 				
 				$('#upload_file_id2').on('change', function(){
+					$("#iframe_foto").unbind("load");
+					$('#iframe_foto').on('load', function(){ setTimeout("recarregarHome()",100); });
 					$('.home-foto-postagem').hide();
 					$('#aguarde-carregando2').show();
 					$('#foto_form2').submit();
+					
 				});
 				
-				$('#iframe_foto').on('load', function(){
-			        setTimeout("recarregarHome()",100);
-			    });
+				
 			    
 			    function recarregarHome(){
 					$('#aguarde-carregando2').hide();
