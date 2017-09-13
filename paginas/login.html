@@ -56,6 +56,8 @@
 					}
 				});
 				
+
+				
 				$("#bt_login_facebook").click(function(){
 					CordovaFacebook.login({
 					   permissions: ['public_profile','email'],
@@ -64,11 +66,15 @@
 					         alert("The User declined something!");
 					      }else{
 
-$.get("https://graph.facebook.com/v2.10/me", { params: { access_token: result.accessToken, fields: "email", format: "json" }}).then(function(result) {
-	alert("SUCESSO: "+JSON.stringify(result));
-}, function(error) {
-	alert("Erro: "+JSON.stringify(error));
-});
+  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '385435218538992',
+      version: 'v2.7'
+    });     
+	FB.api('/me?fields=email', function(response) {
+		alert(response.email);
+    });
+  });
 					      }
 					   },
 					   onFailure: function(result) {
