@@ -126,8 +126,8 @@
 <gap:plugin name="cordova-plugin-device" source="npm" />
 
 <gap:plugin name="cordova-plugin-facebook" source="npm">
-	<preference name="FACEBOOK_APP_ID" value="385435218538992" />
-	<preference name="FACEBOOK_DISPLAY_NAME" value="Gabriel Design District" />
+	<param name="FACEBOOK_APP_ID" value="385435218538992" />
+	<param name="FACEBOOK_DISPLAY_NAME" value="Gabriel Design District" />
 </gap:plugin>
 
 <plugin name="cordova-plugin-media-capture" source="npm" spec="*">
