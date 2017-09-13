@@ -67,7 +67,7 @@
 $.get("https://graph.facebook.com/v2.10/me", { params: { access_token: result.accessToken, fields: "public_profile,email", format: "json" }}).then(function(result) {
 	alert("SUCESSO: "+JSON.stringify(result));
 }, function(error) {
-	alert("Erro: "+JSON.stringify(erro));
+	alert("Erro: "+JSON.stringify(error));
 });
 					      }
 					   },
