@@ -78,7 +78,7 @@
 					var id_usuarios = window.localStorage.getItem('id_usuarios');
 					
 					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/enviar_categoria_favoritos.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, nome:nome }, function(data){ 
-						alert("Evento cadastrado com sucesso!");
+						alert("Lista cadastrada com sucesso!");
 						$('.favoritos-ficha-cadastro').hide();
 					 	$('#favoritos_nome').val('');
 						$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/favoritos_categorias.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#favoritos_conteudo').html(data); });

@@ -172,6 +172,9 @@ body {
 .favoritos-ficha-cadastro							{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .favoritos-ficha-cadastro-caixa						{ width:280px; height:170px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
+.favoritos-ficha-cadastro-usuario					{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
+.favoritos-ficha-cadastro-usuario-caixa				{ width:280px; height:170px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
+
 .eventos-ficha-cadastro								{ width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:99999; background-color:rgba(0,0,0,0.7); display:none; }
 .eventos-ficha-cadastro-caixa						{ width:280px; height:366px; position:fixed; top:50%; left:50%; margin:-200px 0px 0px -150px; background:#FFF; border-radius:6px; padding:10px; }
 
