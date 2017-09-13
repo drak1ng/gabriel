@@ -41,8 +41,9 @@
 			  <input type="email" id="login_email" value="" placeholder="E-mail" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto';">
 			  <input type="password" id="login_senha" value="" placeholder="Senha" style="border:1px solid #CCC; border-radius:6px; background:#FFF; font-family:'roboto';">
 			  <div style="border:1px solid #599611; border-radius:6px; background:#FFF; color:#599611; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_acessar">Acessar</div>
-			  <div style="border:1px solid #CCC; border-radius:6px; background-color:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_esqueci_senha">Esqueci minha senha</div>
-			  <br>
+			  <div style="border:1px solid #4267B2; border-radius:6px; background:#FFF; color:#4267B2; padding:10px; margin-top:20px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_facebook">Acessar com Facebook</div>
+			  <div style="border:1px solid #CCC; border-radius:6px; background:#FFF; color:#999; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_esqueci_senha">Esqueci minha senha</div>
+
 			  <div style="border:1px solid #FFF; border-radius:6px; background:#FFF; color:#000; padding:10px; margin-top:10px; text-shadow: none; text-transform:none; text-transform:uppercase; font-family:'roboto';" id="bt_login_criar_conta">Quero me Cadastrar</div>
 			</div>
 			
@@ -53,6 +54,24 @@
 					if(id_usuarios!="" && id_usuarios!=null){
 						$.mobile.changePage("home.html", { transition: "none", changeHash: false });
 					}
+				});
+				
+				$("#bt_login_facebook").click(function(){
+					CordovaFacebook.login({
+					   permissions: ['email', 'user_likes'],
+					   onSuccess: function(result) {
+					      if(result.declined.length > 0) {
+					         alert("The User declined something!");
+					      }
+					   },
+					   onFailure: function(result) {
+					      if(result.cancelled) {
+					         alert("The user doesn't like my app");
+					      } else if(result.error) {
+					         alert("There was an error:" + result.errorLocalized);
+					      }
+					   }
+					});
 				});
 				
 				$("#bt_login_acessar").click(function(){
