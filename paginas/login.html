@@ -58,12 +58,13 @@
 				
 				$("#bt_login_facebook").click(function(){
 					CordovaFacebook.login({
-					   permissions: ['email', 'user_likes'],
+					   permissions: ['public_profile','email'],
 					   onSuccess: function(result) {
 					      if(result.declined.length > 0) {
 					         alert("The User declined something!");
 					      }else{
-						  	 alert("OBA!");
+
+						  	 alert(JSON.stringify(result));
 					      }
 					   },
 					   onFailure: function(result) {
