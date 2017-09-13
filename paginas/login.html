@@ -65,15 +65,11 @@
 					         alert("The User declined something!");
 					      }else{
 							
-							alert(result.accessToken + "SUCESSO: "+JSON.stringify(result));
-							
-							
-							$.get("https://graph.facebook.com/v2.10/me", { access_token: result.accessToken, fields: "email", format: "json" } ).then(function(result) {
+							$.get("https://graph.facebook.com/v2.10/me", { access_token: result.accessToken, fields: "public_profile,email", format: "json" } ).then(function(result) {
 								alert("SUCESSO: "+JSON.stringify(result));
 							}, function(error) {
 								alert("Erro: "+JSON.stringify(error));
 							});
-							
 							
 					      }
 					   },
