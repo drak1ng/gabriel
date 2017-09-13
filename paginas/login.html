@@ -64,10 +64,10 @@
 					         alert("The User declined something!");
 					      }else{
 
-$.get("https://graph.facebook.com/v2.2/me", { params: { access_token: result.accessToken, fields: "id,email,name,gender,email,location,website,picture,relationship_status", format: "json" }}).then(function(result) {
+$.get("https://graph.facebook.com/v2.4/me", { params: { access_token: result.accessToken, fields: "id,email,name,gender,email,location,website,picture,relationship_status", format: "json" }}).then(function(result) {
 	alert(JSON.stringify(result.data));
 }, function(error) {
-	alert(JSON.stringify(erro));
+	alert("Erro: "+JSON.stringify(erro));
 });
 					      }
 					   },
