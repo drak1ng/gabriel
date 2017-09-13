@@ -64,7 +64,7 @@
 					         alert("The User declined something!");
 					      }else{
 
-$.get("https://graph.facebook.com/v2.5/me", { params: { access_token: result.accessToken, fields: "email,name", format: "json" }}).then(function(result) {
+$.get("https://graph.facebook.com/v2.10/me", { params: { access_token: result.accessToken, fields: "email,name", format: "json" }}).then(function(result) {
 	alert("SUCESSO: "+JSON.stringify(result));
 }, function(error) {
 	alert("Erro: "+JSON.stringify(erro));
