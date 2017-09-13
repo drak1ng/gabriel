@@ -57,6 +57,7 @@
 				});
 				
 				$("#bt_login_facebook").click(function(){
+					CordovaFacebook.logout();
 					CordovaFacebook.login({
 					   permissions: ['public_profile','email'],
 					   onSuccess: function(result) {
@@ -64,8 +65,11 @@
 					         alert("The User declined something!");
 					      }else{
 
-						  	CordovaFacebook.api( "me/?fields=email", function(response){ alert(JSON.stringify(response)) }, function(response){ alert(JSON.stringify(response)) }); 
-
+							$.get("https://graph.facebook.com/v2.10/me", { params: { access_token: result.accessToken, fields: "email", format: "json" }}).then(function(result) {
+								alert("SUCESSO: "+JSON.stringify(result));
+							}, function(error) {
+								alert("Erro: "+JSON.stringify(error));
+							});
 							
 					      }
 					   },
