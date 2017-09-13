@@ -64,11 +64,9 @@
 					         alert("The User declined something!");
 					      }else{
 
-$.post("https://graph.facebook.com/v2.10/me", { params: { access_token: result.accessToken, fields: "email", format: "json" }}).then(function(result) {
-	alert("SUCESSO: "+JSON.stringify(result));
-}, function(error) {
-	alert("Erro: "+JSON.stringify(error));
-});
+						  alert(result.accessToken);
+
+
 					      }
 					   },
 					   onFailure: function(result) {
