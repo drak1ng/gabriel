@@ -67,7 +67,6 @@
 							$.get("https://graph.facebook.com/v2.10/me", { access_token: result.accessToken, fields: "name,first_name,last_name,gender,picture,email", format: "json" } ).then(function(result) {
 								
 								$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/login_facebook.php", { nome:result.first_name, sobrenome:result.last_name, sexo:result.gender, email:result.email, imagem:result.picture.data.url }, function(data){
-									alert('entrei');
 									var res = data.split(";");
 									window.localStorage.setItem('id_usuarios',res[0]);
 									window.localStorage.setItem('nome_usuarios',res[1]);
