@@ -65,8 +65,8 @@
 					      }else{
 							
 							$.get("https://graph.facebook.com/v2.10/me", { access_token: result.accessToken, fields: "name,first_name,last_name,gender,picture,email", format: "json" } ).then(function(result) {
-								//alert("SUCESSO: "+JSON.stringify(result));
-								alert("Nome: "+result.name);
+								alert("SUCESSO: "+JSON.stringify(result));
+								//alert("Nome: "+result.name);
 							}, function(error) {
 								alert("Erro: "+JSON.stringify(error));
 							});
