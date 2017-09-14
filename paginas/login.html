@@ -61,23 +61,34 @@
 					   permissions: ['public_profile','email'],
 					   onSuccess: function(result) {
 					      if(result.declined.length > 0) {
-					         alert("The User declined something!");
+					         alert("Não foi possível autenticar pelo Facebook!");
 					      }else{
 							
 							$.get("https://graph.facebook.com/v2.10/me", { access_token: result.accessToken, fields: "name,first_name,last_name,gender,picture,email", format: "json" } ).then(function(result) {
 
 								alert("Nome: "+result.picture.data.url);
+								
+								$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/login_facebook.php", { nome:result.first_name, sobrenome:result.last_name, sexo:result.gender, email:result.email, imagem:result.picture.data.url, id_facebook:result.id }, function(data){
+									var res = data.split(";");
+									window.localStorage.setItem('id_usuarios',res[0]);
+									window.localStorage.setItem('nome_usuarios',res[1]);
+									window.localStorage.setItem('tipo_usuarios',res[2]);
+									$('.menu-container-caixa-nome').html(res[1]);
+									$('.menu-container-caixa-logo').css('background-image','url('+res[3]+')');
+									$.mobile.changePage("home.html", { transition: "fade", changeHash: false });
+								});
+								
 							}, function(error) {
-								alert("Erro: "+JSON.stringify(error));
+								alert("Não foi possível autenticar pelo Facebook!");
 							});
 							
 					      }
 					   },
 					   onFailure: function(result) {
 					      if(result.cancelled) {
-					         alert("The user doesn't like my app");
+					         alert("Não foi possível autenticar pelo Facebook!");
 					      } else if(result.error) {
-					         alert("There was an error:" + result.errorLocalized);
+					         alert("Não foi possível autenticar pelo Facebook!");
 					      }
 					   }
 					});
