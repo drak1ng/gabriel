@@ -63,6 +63,8 @@
 				var id_categoria = window.localStorage.getItem('id_categoria');
 				var busca = window.localStorage.getItem('busca');
 				
+				window.localStorage.setItem('local','lista_empresa');
+				
 				$('#bt_lista_voltar').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
 				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });

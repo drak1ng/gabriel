@@ -59,6 +59,8 @@
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				
+				window.localStorage.setItem('local','rua_gabriel');
+				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
 				$('.topo2-categorias').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
