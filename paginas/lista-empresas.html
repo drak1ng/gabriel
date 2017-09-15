@@ -28,6 +28,7 @@
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
         <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+                <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
         <title>GABRIEL</title>
 		<script type="text/javascript" src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
@@ -40,7 +41,8 @@
 			<div role="main" class="ui-content" style="text-align:center;">
 				
 				<div class="topo2">
-					<img src="../img/logo_gdd.png" class='topo2-logo'>
+				    <div style="min-width:10px; float:left; color:#000; padding:30px 15px 0px 10px;" id="bt_lista_voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+					<img src="../img/logo_gdd.png" class='topo2-logo' style="margin-left:0px;">
 					<div class="topo2-menu"></div>
 					<div class="topo2-categorias"></div>
 					<div class="topo2-rua"></div>
@@ -60,6 +62,8 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_categoria = window.localStorage.getItem('id_categoria');
 				var busca = window.localStorage.getItem('busca');
+				
+				$('#bt_lista_voltar').click(function(){ $.mobile.changePage("categorias.html", { transition: "fade", changeHash: false }); });
 				
 				$('.topo2-menu').click(function(){ $('.menu-container').show(); });
 				$('.topo2-logo').click(function(){ $.mobile.changePage("home.html", { transition: "fade", changeHash: false }); });
