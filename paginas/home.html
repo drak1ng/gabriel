@@ -79,6 +79,7 @@
 				
 				var tipo_usuarios = window.localStorage.getItem('tipo_usuarios');
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
+				var registrationId = window.localStorage.getItem('registrationId');
 				
 				window.localStorage.setItem('local','home');
 				
@@ -102,7 +103,7 @@
 					$.mobile.changePage("login.html", { transition: "fade", changeHash: false });
 				});
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, registrationId:registrationId }, function(data){ $('#home_conteudo').html(data); });
 				
 				$('.btfoto').click(function(){
 					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/galerias-options.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#postagem_galeria').html(data); });
