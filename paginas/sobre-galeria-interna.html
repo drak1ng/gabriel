@@ -64,6 +64,8 @@
 			
 			<script>
 				
+				$("#iframe_foto").unbind("load");
+				
 				$("#bt_sobre_galeria_interna_voltar").click(function(){
 					$.mobile.changePage("sobre-galeria.html", { transition: "fade", changeHash: false });
 				});
