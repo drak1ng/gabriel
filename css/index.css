@@ -136,7 +136,8 @@ body {
 
 .empresa-ficha-texto								{ padding:10px 0px; }
 
-.empresa-ficha-360									{ width:40px; height:40px; float:right; background:url(../img/026.png) center center no-repeat; background-size:contain; }
+.empresa-ficha-360									{ width:40px; height:40px; float:right; background:url(../img/026.png) center center no-repeat; background-size:contain; margin-top:-8px; }
+.empresa-ficha-360-caixa							{ display:none; width:100%; height:calc(100% - 180px); position:fixed; top:200px; left:0px;'><iframe style='border-width: 0px; border-style: initial; border-color: initial; }
 
 .empresa-ficha-abas									{ padding-top:10px; }
 .empresa-ficha-abas-1								{ font-weight:600; background:#ebebeb; padding:7px 10px; border-radius:6px; min-width:10px; float:left; }
