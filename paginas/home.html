@@ -132,7 +132,7 @@
 			    
 			    function recarregarHome(){
 					$('#aguarde-carregando2').hide();
-					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){ $('#home_conteudo').html(data); });
+					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, registrationId:registrationId }, function(data){ $('#home_conteudo').html(data); });
 			    }
 				
 			</script>
