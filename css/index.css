@@ -136,6 +136,8 @@ body {
 
 .empresa-ficha-texto								{ padding:10px 0px; }
 
+.empresa-ficha-360									{ width:40px; height:40px; float:right; background:url(../img/026.png) center center no-repeat; background-size:contain; }
+
 .empresa-ficha-abas									{ padding-top:10px; }
 .empresa-ficha-abas-1								{ font-weight:600; background:#ebebeb; padding:7px 10px; border-radius:6px; min-width:10px; float:left; }
 .empresa-ficha-abas-2								{ font-weight:300; background:none; padding:7px 10px; border-radius:6px; min-width:10px; float:left; }
