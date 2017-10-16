@@ -46,8 +46,8 @@
 				<div id="id_conteudo_cadastro" style="text-align:center; padding:25px 0px 0px 0px; color:#999; font-size:14px; text-transform:none; text-align:justify; font-weight:normal;">
 					<p style='margin-bottom:30px;'>Preencha todos os campos abaixo para se cadastrar e ter acesso ao aplicativo.</p>
 					<input type="tel" id="cadastro_profissional_cpf" placeholder="CPF" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
-					<input type="text" id="cadastro_profissional_nome" placeholder="Nome" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
-					<input type="text" id="cadastro_profissional_sobrenome" placeholder="Sobrenome" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
+					<input type="text" id="cadastro_profissional_nome" placeholder="Nome*" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
+					<input type="text" id="cadastro_profissional_sobrenome" placeholder="Sobrenome*" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
 					<input type="tel" id="cadastro_profissional_nascimento" placeholder="Nascimento" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
 					<select id="cadastro_profissional_sexo" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
 						<option value="">Sexo</option>
@@ -62,7 +62,7 @@
 					</select>
 					<br>
 					<h3>Endereço</h3>					
-					<input type="tel" id="cadastro_profissional_cep" placeholder="Cep" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
+					<input type="tel" id="cadastro_profissional_cep" placeholder="Cep*" style="border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; font-family:'roboto'; padding:10px 2px;">
 					<div style='clear:both;'></div>
 					<br>
 					<h3>Dados de Login</h3>
@@ -77,6 +77,12 @@
 		
 			<style>
 				.ui-select .ui-btn { font-family:'roboto'; border:0px; border-bottom:1px solid #CCC; border-radius:0px; background:#FFF; text-align:left; font-size:14px; color:#999; padding-left:2px; font-weight:normal; text-shadow:0 0 0 #fff; -webkit-box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: 0 0 0 rgba(0,0,0,0); }
+				#cadastro_profissional_nome::-webkit-input-placeholder { color:#000; } #cadastro_profissional_nome:-moz-placeholder { color:#000; } #cadastro_profissional_nome::-moz-placeholder { color:#000; } #cadastro_profissional_nome:-ms-input-placeholder { color:#000; }
+				#cadastro_profissional_sobrenome::-webkit-input-placeholder { color:#000; } #cadastro_profissional_sobrenome:-moz-placeholder { color:#000; } #cadastro_profissional_sobrenome::-moz-placeholder { color:#000; } #cadastro_profissional_sobrenome:-ms-input-placeholder { color:#000; }
+				#cadastro_profissional_email::-webkit-input-placeholder { color:#000; } #cadastro_profissional_email:-moz-placeholder { color:#000; } #cadastro_profissional_email::-moz-placeholder { color:#000; } #cadastro_profissional_email:-ms-input-placeholder { color:#000; }
+				#cadastro_profissional_senha::-webkit-input-placeholder { color:#000; } #cadastro_profissional_senha:-moz-placeholder { color:#000; } #cadastro_profissional_senha::-moz-placeholder { color:#000; } #cadastro_profissional_senha:-ms-input-placeholder { color:#000; }
+				#cadastro_profissional_confirme_senha::-webkit-input-placeholder { color:#000; } #cadastro_profissional_confirme_senha:-moz-placeholder { color:#000; } #cadastro_profissional_confirme_senha::-moz-placeholder { color:#000; } #cadastro_profissional_confirme_senha:-ms-input-placeholder { color:#000; }
+				#cadastro_profissional_cep::-webkit-input-placeholder { color:#000; } #cadastro_profissional_cep:-moz-placeholder { color:#000; } #cadastro_profissional_cep::-moz-placeholder { color:#000; } #cadastro_profissional_cep:-ms-input-placeholder { color:#000; }
 			</style>
 			
 			<script>
@@ -99,7 +105,7 @@
 					var telefone_contato = $('#cadastro_profissional_contato_telefone').val();
 					var cep = $('#cadastro_profissional_cep').val();
 					
-					if(cpf==""){ alert("O campo CPF deve ser preenchido"); return false; }
+					//if(cpf==""){ alert("O campo CPF deve ser preenchido"); return false; }
 					if(nome==""){ alert("O campo Nome deve ser preenchido"); return false; }
 					if(sobrenome==""){ alert("O campo Sobrenome deve ser preenchido"); return false; }
 					if(email==""){ alert("O campo E-mail deve ser preenchido"); return false; }
