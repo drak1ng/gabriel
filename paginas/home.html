@@ -71,6 +71,10 @@
 					<div style="padding-top:190px; color:#000; text-align:center;"><b>Aguarde!<br>Enviando sua imagem</b></div>
 				</div>
 				
+				<div id='lable_pagamentos_pendentes' style='display:none; position:fixed; left:0px; bottom:0px; width:100%;'>
+					<div style="background:#F2802D; font-family:'roboto'; padding:10px; color:#FFF; font-weight:600; font-size:14px; margin:5px; border-radius:5px;">Você possui pagamentos pendentes<br>Clique aqui para visualizar</div>
+				</div>
+				
 			</div>
 			
 			<script>
@@ -126,11 +130,23 @@
 					$('.home-foto-postagem').hide();
 					$('#aguarde-carregando2').show();
 					$('#foto_form2').submit();
-					
 				});
 				
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/checar-pagamentos.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios }, function(data){
+					if(data=="SIM"){
+						$('#lable_pagamentos_pendentes').show();
+						setTimeout(hideAvisoFinanceiro,12000);
+					}
+				});
 				
-			    
+				$('#lable_pagamentos_pendentes').click(function(){
+					$.mobile.changePage("sobre-financeiro.html", { transition: "fade", changeHash: false });
+				});
+				
+				function hideAvisoFinanceiro(){
+					$('#lable_pagamentos_pendentes').hide();
+				}
+				
 			    function recarregarHome(){
 					$('#aguarde-carregando2').hide();
 					$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/home.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, registrationId:registrationId }, function(data){ $('#home_conteudo').html(data); });
