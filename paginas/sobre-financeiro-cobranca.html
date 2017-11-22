@@ -59,7 +59,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_cobranca = window.localStorage.getItem('id_cobranca');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/meu-financeiro-cobranca.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_cobranca:id_cobranca }, function(data){ $('#sobre-financeiro-cobranca-conteudo').html(data); $('#sobre-financeiro-cobranca-conteudo').enhanceWithin(); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/meu-financeiro-cobranca.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_cobranca:id_cobranca }, function(data){ $('#sobre-financeiro-cobranca-conteudo').html(data); });
 				
 			</script>
 		
