@@ -42,15 +42,13 @@
 				</div>
 		    </div>
 
-			<div role="main" class="ui-content">
-				<div class="conteudo" style="margin-top:5px; text-align:justify; font-size:14px;" id="sobre-financeiro-cobranca-conteudo">
-					<div style="padding-top:120px; text-align:center; font-size:13px;">
-						<img src="../img/loading.gif" width="110" height="10" /><br><br>
-						Aguarde carregando...
-					</div>
+			<div class="conteudo" style="padding:0px; margin:50px 15px 15px 15px;" id="sobre-financeiro-cobranca-conteudo">
+				<div style="padding-top:120px; text-align:center; font-size:13px;">
+					<img src="../img/loading.gif" width="110" height="10" /><br><br>
+					Aguarde carregando...
 				</div>
 			</div>
-			
+						
 			<script>
 				
 				$("#bt_sobre_financeiro_cobranca_voltar").click(function(){
@@ -61,7 +59,7 @@
 				var id_usuarios = window.localStorage.getItem('id_usuarios');
 				var id_cobranca = window.localStorage.getItem('id_cobranca');
 				
-				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/meu-financeiro-cobranca.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_cobranca:id_cobranca }, function(data){ $('#sobre-financeiro-cobranca-conteudo').html(data); });
+				$.get("http://gabrieldesigndistrict.com.br/app_api_v2.0.1/meu-financeiro-cobranca.php", { tipo_usuarios:tipo_usuarios, id_usuarios:id_usuarios, id_cobranca:id_cobranca }, function(data){ $('#sobre-financeiro-cobranca-conteudo').html(data); $('#sobre-financeiro-cobranca-conteudo').enhanceWithin(); });
 				
 			</script>
 		
