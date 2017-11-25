@@ -109,8 +109,6 @@
 <gap:plugin name="cordova-plugin-network-information" source="npm"  />
 <gap:plugin name="cordova-plugin-media" source="npm"  />
 
-<!--Upload de arquivos -->
-<gap:plugin name="cordova-plugin-fileopener" source="npm"  />
 
 <preference name="AndroidPersistentFileLocation" value="Internal" />
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
